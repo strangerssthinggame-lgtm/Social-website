@@ -44,6 +44,7 @@ export const Hero: React.FC = () => {
 
                 <div className={styles.visual}>
                     <div className={styles.phoneFrame}>
+                        <div className={styles.notch}></div>
                         <div className={styles.screen} style={{ padding: 0 }}>
                             <AppPreview />
                         </div>

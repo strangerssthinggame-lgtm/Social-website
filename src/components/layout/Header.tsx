@@ -47,7 +47,7 @@ export const Header: React.FC = () => {
                 </nav>
 
                 <div className={styles.ctaContainer}>
-                    <Button size="sm" onClick={handleJoinWaitlist} variant={isScrolled ? "primary" : "primary"}>
+                    <Button size="sm" onClick={handleJoinWaitlist} variant={isScrolled ? "primary" : "primary"} className={styles.waitlistBtn}>
                         Join Waitlist
                     </Button>
                     <button className={styles.mobileMenuBtn} aria-label="Menu">

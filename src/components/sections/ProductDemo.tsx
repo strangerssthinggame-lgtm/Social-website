@@ -4,7 +4,11 @@ import React, { useState } from 'react';
 import styles from './ProductDemo.module.css';
 import { GamePreview } from '../ui/GamePreview';
 
+import { GameSelector } from '../ui/GameSelector';
+
 export const ProductDemo: React.FC = () => {
+    const [selectedGame, setSelectedGame] = useState('nhie');
+
     return (
         <section className={styles.section} id="games">
             <div className={styles.container}>
@@ -14,9 +18,14 @@ export const ProductDemo: React.FC = () => {
                     <div className={styles.phoneFrame}>
                         <div className={styles.notch}></div>
                         <div className={styles.screen}>
-                            <GamePreview />
+                            <GamePreview activeGameId={selectedGame} />
                         </div>
                     </div>
+
+                    <GameSelector
+                        selectedGameId={selectedGame}
+                        onSelectGame={setSelectedGame}
+                    />
                 </div>
             </div>
         </section>

@@ -1,0 +1,268 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1.25rem;
+    position: relative;
+    background-color: #ffffff;
+    color: black;
+    overflow: hidden;
+}
+
+.centerContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.4s ease-out;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.counterCurrent {
+    font-family: var(--font-outfit, sans-serif);
+    font-size: 2.5rem;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-primary, #facc15);
+    line-height: 1;
+}
+
+.counterTotal {
+    font-family: var(--font-outfit, sans-serif);
+    font-size: 1rem;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--text-tertiary, #71717a);
+    margin-bottom: 4px;
+}
+
+.promptLabel {
+    text-align: center;
+    font-family: var(--font-outfit, sans-serif);
+    font-weight: 800;
+    color: var(--text-secondary, #a1a1aa);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 2rem;
+    font-size: 0.85rem;
+}
+
+.optionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: auto;
+}
+
+.optionCard {
+    background: #f4f4f5;
+    border: 2px solid #e4e4e7;
+    border-radius: 20px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: transform 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    min-height: 120px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.optionCard:active {
+    transform: scale(0.96);
+    background: #e4e4e7;
+}
+
+.optionCard:hover {
+    border-color: #d4d4d8;
+    background: #e4e4e7;
+    transform: scale(1.02);
+}
+
+.optionText {
+    font-family: var(--font-outfit, sans-serif);
+    font-weight: 900;
+    font-size: 1.1rem;
+    color: black;
+    line-height: 1.25;
+    z-index: 2;
+    max-width: 100%;
+}
+
+.orDivider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -8px 0;
+    z-index: 10;
+}
+
+.orCircle {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: 2px solid #e4e4e7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 0.8rem;
+    color: #aeaeae;
+}
+
+/* Selected State */
+.selected {
+    background: var(--color-primary, #facc15);
+    border-color: var(--color-primary, #facc15);
+    box-shadow: 0 8px 24px rgba(250, 204, 21, 0.3);
+}
+
+.selected:hover {
+    background: #facc15;
+    border-color: #facc15;
+    transform: scale(1.02);
+}
+
+.dimmed {
+    opacity: 0.5;
+    transform: scale(0.95);
+    pointer-events: none;
+}
+
+.percentage {
+    font-family: var(--font-outfit, sans-serif);
+    font-weight: 900;
+    font-size: 2rem;
+    color: black;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.showPercentage .percentage {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Summary Styles (Shared with NHIE) */
+.summaryHeader {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.emoji {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.summaryTitle {
+    font-family: var(--font-outfit);
+    font-weight: 900;
+    font-style: italic;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: black;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.vibeLabel {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #f4f4f5;
+    border: 1px solid #e4e4e7;
+    border-radius: 99px;
+    font-family: var(--font-outfit);
+    font-weight: 800;
+    font-size: 0.75rem;
+    color: #ca8a04;
+    text-transform: uppercase;
+}
+
+.statsRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #f4f4f5;
+    border: 1px solid #e4e4e7;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    color: black;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.statLabel {
+    font-family: var(--font-outfit);
+    font-weight: 700;
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    color: var(--text-tertiary, #71717a);
+    margin-bottom: 0.25rem;
+}
+
+.statValue {
+    font-family: var(--font-outfit);
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.restartBtn {
+    margin-top: 2rem;
+    background-color: var(--color-primary, #facc15);
+    color: black;
+    border: none;
+    width: 100%;
+    height: 56px;
+    border-radius: 16px;
+    font-family: var(--font-outfit);
+    font-weight: 900;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: transform 0.2s;
+}
+
+.restartBtn:hover {
+    transform: translateY(-2px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

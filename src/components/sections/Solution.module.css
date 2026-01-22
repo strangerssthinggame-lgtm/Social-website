@@ -63,19 +63,34 @@
 .phoneFrame {
     width: 280px;
     height: 560px;
-    background: var(--color-accent);
-    border-radius: 40px;
-    padding: 10px;
-    box-shadow: var(--shadow-lg);
+    background: #18181b;
+    border-radius: 44px;
+    padding: 6px;
+    box-shadow:
+        0 0 0 2px #3f3f46,
+        0 0 0 6px #18181b,
+        0 30px 80px rgba(0, 0, 0, 0.6);
     position: relative;
-    border: 3px solid #333;
+    /* Removed border */
+}
+
+.notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px;
+    height: 22px;
+    background: #18181b;
+    border-radius: 0 0 16px 16px;
+    z-index: 10;
 }
 
 .screen {
     width: 100%;
     height: 100%;
     background: #fdfdfd;
-    border-radius: 32px;
+    border-radius: 38px;
     overflow: hidden;
     display: flex;
     flex-direction: column;

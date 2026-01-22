@@ -2,6 +2,9 @@
 
 import React from 'react';
 import styles from './GamePreview.module.css';
+import { NeverHaveIEver } from '../games/NeverHaveIEver';
+import { WouldYouRather } from '../games/WouldYouRather';
+import { ThisOrThat } from '../games/ThisOrThat';
 import {
     Gamepad2,
     ArrowRight,
@@ -21,7 +24,7 @@ import {
     Zap
 } from 'lucide-react';
 
-const GAMES = [
+export const GAMES = [
     {
         id: 'nhie',
         label: 'Never Have I Ever',
@@ -44,9 +47,9 @@ const GAMES = [
         description: "Pick your poison and see how your choices compare with others.",
         stats: { time: "3-5 Mins", players: "2 Souls", active: "856+ Active" },
         vibes: [
-            { id: 'easy', label: 'Easy', icon: <Sparkles size={16} /> },
-            { id: 'hard', label: 'Hard', icon: <Flame size={16} /> },
-            { id: 'gross', label: 'Gross', icon: <Zap size={16} /> }
+            { id: 'chill', label: 'Chill', icon: <Sparkles size={16} /> },
+            { id: 'deep', label: 'Deep', icon: <Zap size={16} /> },
+            { id: 'wild', label: 'Wild', icon: <Flame size={16} /> }
         ],
         rules: ["Two Options", "Choose One", "See Stats", "Discuss"],
         icon: Flame,
@@ -112,20 +115,48 @@ const GAMES = [
     }
 ];
 
-export const GamePreview: React.FC = () => {
-    const [selectedGameId, setSelectedGameId] = React.useState<string | null>(null);
-    const [view, setView] = React.useState<'list' | 'detail' | 'scanning'>('list');
+interface GamePreviewProps {
+    activeGameId?: string | null;
+}
+
+export const GamePreview: React.FC<GamePreviewProps> = ({ activeGameId }) => {
+    // Default to 'nhie' if no explicit ID, but since external control is expected, 
+    // we'll rely on activeGameId or fall back to 'nhie'.
+    const [internalSelectedGameId, setInternalSelectedGameId] = React.useState<string>('nhie');
+    const [view, setView] = React.useState<'detail' | 'scanning'>('detail');
     const [selectedVibe, setSelectedVibe] = React.useState<string>('');
+    const [isPlaying, setIsPlaying] = React.useState(false);
 
-    const selectedGame = GAMES.find(g => g.id === selectedGameId);
+    // If activeGameId prop is provided, precise control mode is active
+    const selectedGameId = activeGameId !== undefined ? activeGameId : internalSelectedGameId;
+    const selectedGame = GAMES.find(g => g.id === selectedGameId) || GAMES[0];
 
-    const handleGameClick = (id: string) => {
-        const game = GAMES.find(g => g.id === id);
-        setSelectedGameId(id);
-        if (game && game.vibes.length > 0) {
-            setSelectedVibe(game.vibes[0].id);
+    // Sync view state with activeGameId changes
+    React.useEffect(() => {
+        if (activeGameId) {
+            setView('detail');
+            setIsPlaying(false);
+            const game = GAMES.find(g => g.id === activeGameId);
+            if (game && game.vibes.length > 0) {
+                setSelectedVibe(game.vibes[0].id);
+            }
         }
-        setView('detail');
+    }, [activeGameId]);
+
+    const handleBack = () => {
+        if (isPlaying) {
+            setIsPlaying(false);
+        } else if (view === 'scanning') {
+            setView('detail');
+        }
+    };
+
+    const handlePlay = () => {
+        if (selectedGameId === 'nhie' || selectedGameId === 'wyr' || selectedGameId === 'thisorthat') {
+            setIsPlaying(true);
+        } else {
+            setView('scanning');
+        }
     };
 
     return (
@@ -133,52 +164,38 @@ export const GamePreview: React.FC = () => {
             {/* App Device Header */}
             <div className={styles.header}>
                 <div className={styles.topBar}>
-                    {view === 'detail' ? (
-                        <>
-                            <button className={styles.navButton} onClick={() => setView('list')}>
-                                <ChevronLeft size={20} />
-                            </button>
-                            <button className={styles.navButton}>
-                                <HelpCircle size={20} color="#71717a" />
-                            </button>
-                        </>
+                    {/* Only show Back button if playing or conducting a scan (not in base detail view) */}
+                    {(isPlaying || view === 'scanning') ? (
+                        <button
+                            className={styles.navButton}
+                            onClick={handleBack}
+                            style={isPlaying && (selectedGameId === 'nhie' || selectedGameId === 'wyr' || selectedGameId === 'thisorthat')
+                                ? { color: 'black', background: 'rgba(0,0,0,0.05)' }
+                                : {}
+                            }
+                        >
+                            <ChevronLeft size={20} />
+                        </button>
                     ) : (
-                        <div className={styles.lobbyTop}>
-                            <div className={styles.lobbyCircle}>
-                                <Gamepad2 size={16} color="black" />
-                            </div>
-                            <X size={18} color="#71717a" />
-                        </div>
+                        // Placeholder to balance the header or show help
+                        <button className={styles.navButton} style={{ opacity: 0, pointerEvents: 'none' }}>
+                            <ChevronLeft size={20} />
+                        </button>
                     )}
+
+                    {/* Help button removed as requested */}
+                    <div style={{ width: 40 }}></div>
                 </div>
             </div>
 
             {/* Main Content */}
             <div className={styles.content}>
-                {view === 'list' ? (
-                    <>
-                        <div className={styles.lobbyHeader}>
-                            <h3>GAME LOBBY</h3>
-                        </div>
-                        <div className={styles.gameList}>
-                            {GAMES.map(game => (
-                                <div
-                                    key={game.id}
-                                    className={styles.gameCard}
-                                    onClick={() => handleGameClick(game.id)}
-                                >
-                                    <div className={styles.gameIcon} style={{ background: `${game.color}20`, color: game.color }}>
-                                        <game.icon size={16} />
-                                    </div>
-                                    <div className={styles.gameInfo}>
-                                        <span className={styles.gameLabel}>{game.label}</span>
-                                        <span className={styles.gameSub}>{game.tagline}</span>
-                                    </div>
-                                    <ArrowRight size={14} color="#3f3f46" />
-                                </div>
-                            ))}
-                        </div>
-                    </>
+                {isPlaying && selectedGameId === 'nhie' ? (
+                    <NeverHaveIEver vibe={selectedVibe} />
+                ) : isPlaying && selectedGameId === 'wyr' ? (
+                    <WouldYouRather vibe={selectedVibe} />
+                ) : isPlaying && selectedGameId === 'thisorthat' ? (
+                    <ThisOrThat vibe={selectedVibe} />
                 ) : selectedGame && (
                     <div className={styles.detailView}>
                         <div className={styles.heroSection}>
@@ -223,20 +240,20 @@ export const GamePreview: React.FC = () => {
             </div>
 
             {/* Sticky Actions for Detail View */}
-            {view === 'detail' && (
+            {view === 'detail' && !isPlaying && (
                 <div className={styles.stickyFooter}>
                     <button className={styles.inviteButton}>
                         <UserPlus size={20} color="#71717a" />
                     </button>
-                    <button className={styles.findMatchButton} onClick={() => setView('scanning')}>
-                        <span>FIND MATCH</span>
-                        <ArrowRight size={20} />
+                    <button className={styles.findMatchButton} onClick={handlePlay}>
+                        <Play size={20} fill="black" />
+                        <span>PLAY DEMO</span>
                     </button>
                 </div>
             )}
 
-            {/* Scanning View */}
-            {view === 'scanning' && selectedGame && (
+            {/* Scanning View - Overlay or separate view */}
+            {view === 'scanning' && selectedGame && !isPlaying && (
                 <div className={styles.scanningOverlay}>
                     <div className={styles.scanningContent}>
                         <div className={styles.scanPulse}>
@@ -257,14 +274,7 @@ export const GamePreview: React.FC = () => {
                 </div>
             )}
 
-            {/* Bottom Nav Simulation for List View */}
-            {view === 'list' && (
-                <div className={styles.bottomNav}>
-                    <div className={styles.navItem}><div className={styles.navDot} /></div>
-                    <div className={`${styles.navItem} ${styles.active}`}><div className={styles.navDot} /></div>
-                    <div className={styles.navItem}><div className={styles.navDot} /></div>
-                </div>
-            )}
+            {/* Removed Bottom Nav as list view is gone */}
         </div>
     );
 };

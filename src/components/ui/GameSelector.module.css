@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    margin-left: 1rem;
+    width: fit-content;
+    /* Removed max-width and margin-top as it's separate */
+}
+
+.selectorBtn {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    background: var(--surface);
+    border: 2px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--text-secondary);
+    position: relative;
+    overflow: hidden;
+}
+
+.selectorBtn:hover {
+    transform: translateY(-4px);
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+    background: var(--surface-hover);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.active {
+    background: var(--surface-active);
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.active:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.iconWrapper {
+    margin-bottom: 4px;
+    transition: transform 0.3s ease;
+}
+
+.label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: var(--font-outfit);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: 8px;
+}
+
+.selectorBtn:hover .label,
+.active .label {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.selectorBtn:hover .iconWrapper,
+.active .iconWrapper {
+    transform: translateY(-8px);
+}

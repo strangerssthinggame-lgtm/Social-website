@@ -22,6 +22,7 @@ export const Solution: React.FC = () => {
                     </div>
                     <div className={styles.visual}>
                         <div className={styles.phoneFrame}>
+                            <div className={styles.notch}></div>
                             <div className={styles.screen} style={{ padding: 0 }}>
                                 <GamePreview />
                             </div>
@@ -40,6 +41,7 @@ export const Solution: React.FC = () => {
                     </div>
                     <div className={styles.visual}>
                         <div className={styles.phoneFrame}>
+                            <div className={styles.notch}></div>
                             <div className={styles.screen} style={{ padding: 0 }}>
                                 <VibePreview />
                             </div>

@@ -6,7 +6,7 @@ import { ProductDemo } from "@/components/sections/ProductDemo";
 import { Safety } from "@/components/sections/Safety";
 import { Science } from "@/components/sections/Science";
 import { FinalCTA } from "@/components/sections/FinalCTA";
-import { Footer } from "@/components/layout/Footer";
+import { Footer } from "@/components/layout/Footer"; 
 
 export default function Home() {
   return (

@@ -1,0 +1,166 @@
+.section {
+    padding: 10rem 0;
+    background-color: var(--background);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    align-items: stretch;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 5rem 0;
+    }
+
+    .title {
+        margin-bottom: 3rem;
+        font-size: 2rem;
+    }
+
+    .grid {
+        gap: 2.5rem;
+    }
+
+    .card {
+        padding: 1.25rem;
+    }
+
+    .cardTitle {
+        font-size: 1rem;
+    }
+
+    .cardDescription {
+        font-size: 0.9rem;
+    }
+
+    .whyItWorks {
+        padding: 2rem 1.5rem;
+    }
+
+    .contentHeadline {
+        font-size: 2rem;
+    }
+
+    .contentText {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: 1.1fr 1fr;
+        gap: 4rem;
+    }
+}
+
+/* Cards Column */
+.cardsColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: white;
+    border: 2px solid var(--border);
+    border-radius: 20px;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--color-accent);
+    background: var(--color-primary);
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(250, 204, 21, 0.3);
+}
+
+.card:hover .cardTitle {
+    color: var(--color-accent);
+}
+
+.card:hover .cardDescription {
+    color: var(--color-accent);
+}
+
+.card:hover .cardIcon {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.cardIcon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.cardContent {
+    flex: 1;
+}
+
+.cardTitle {
+    font-family: var(--font-outfit);
+    font-weight: 900;
+    font-style: italic;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Why It Works - Right Side */
+.whyItWorks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--color-accent) 0%, #1a1a2e 100%);
+    border-radius: 28px;
+    color: white;
+}
+
+.contentHeadline {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.contentText {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+}

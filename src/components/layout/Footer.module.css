@@ -1,0 +1,132 @@
+.footer {
+    padding: 6rem 0 3rem;
+    background: linear-gradient(180deg, var(--color-primary) 0%, #F59E0B 100%);
+    color: var(--color-accent);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+
+.brandInfo {
+    max-width: 300px;
+}
+
+.logo {
+    font-family: var(--font-outfit);
+    font-weight: 950;
+    font-style: italic;
+    font-size: 1.75rem;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+}
+
+.description {
+    color: var(--color-accent);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    opacity: 0.8;
+    font-weight: 500;
+}
+
+.linksGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.column h4 {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: var(--color-accent);
+    font-weight: 900;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.links a {
+    color: var(--color-accent);
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    opacity: 0.7;
+    font-weight: 600;
+}
+
+.links a:hover {
+    opacity: 1;
+    transform: translateX(4px);
+}
+
+.bottom {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.copyright {
+    color: var(--color-accent);
+    font-size: 0.85rem;
+    opacity: 0.6;
+    font-weight: 500;
+}
+
+.socials {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    color: var(--color-accent);
+    transition: all 0.3s ease;
+}
+
+.socials a:hover {
+    background: var(--color-accent);
+    color: var(--color-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .linksGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .bottom {
+        flex-direction: row;
+    }
+}

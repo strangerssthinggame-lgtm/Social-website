@@ -1,0 +1,445 @@
+.container {
+    width: 100%;
+    height: 100%;
+    background-color: #09090b;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem 1rem 0.5rem;
+    z-index: 50;
+}
+
+.topBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navButton {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.navButton:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.lobbyTop {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lobbyCircle {
+    width: 32px;
+    height: 32px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    flex: 1;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.content::-webkit-scrollbar {
+    display: none;
+}
+
+/* List View */
+.lobbyHeader {
+    padding: 4.5rem 1rem 1rem;
+}
+
+.lobbyHeader h3 {
+    font-family: var(--font-outfit);
+    font-weight: 950;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.gameList {
+    padding: 0 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.gameCard {
+    background: #111;
+    border: 1px solid #27272a;
+    border-radius: 16px;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.gameCard:hover {
+    border-color: var(--color-primary);
+    transform: scale(1.02);
+}
+
+.gameIcon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gameInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.gameLabel {
+    font-size: 0.85rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+.gameSub {
+    font-size: 0.65rem;
+    color: #71717a;
+    font-weight: 600;
+}
+
+/* Detail View */
+.detailView {
+    animation: slideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.heroSection {
+    padding: 5rem 1.5rem 1.5rem;
+}
+
+.gameIconContainer {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.gameTitle {
+    font-family: var(--font-outfit);
+    font-weight: 950;
+    font-style: italic;
+    font-size: 1.75rem;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+}
+
+.gameDescription {
+    font-size: 0.8rem;
+    color: #a1a1aa;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.statsRow {
+    display: flex;
+    gap: 12px;
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.statBox {
+    flex: 1;
+    background: #111;
+    border-radius: 16px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.statValue {
+    font-size: 0.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.difficultySection {
+    padding: 0 1.5rem;
+}
+
+.sectionTitle {
+    font-family: var(--font-outfit);
+    font-weight: 950;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.difficultyGrid {
+    display: flex;
+    gap: 10px;
+}
+
+.diffCard {
+    flex: 1;
+    background: #111;
+    border: 2px solid #27272a;
+    border-radius: 14px;
+    padding: 1rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.selectedDiff {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+/* Icon styles passed inline */
+
+.diffLabel {
+    font-size: 0.65rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.spacer {
+    height: 120px;
+}
+
+.stickyFooter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    background: linear-gradient(to top, #09090b 80%, transparent);
+    display: flex;
+    gap: 12px;
+    z-index: 50;
+}
+
+.inviteButton {
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border: none;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.findMatchButton {
+    flex: 1;
+    height: 50px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-family: var(--font-outfit);
+    font-weight: 950;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.bottomNav {
+    height: 50px;
+    background-color: #09090b;
+    border-top: 1px solid #1f1f22;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.navDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #3f3f46;
+}
+
+.active .navDot {
+    background: var(--color-primary);
+    box-shadow: 0 0 10px var(--color-primary);
+}
+/* Scanning UI */
+.scanningOverlay {
+    position: absolute;
+    inset: 0;
+    background: #09090b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.scanningContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.scanPulse {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin-bottom: 2rem;
+}
+
+.scanRing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    opacity: 0;
+    animation: scanPulse 2s infinite;
+}
+
+.scanRing:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.scanRing:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes scanPulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.scanIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.scanTitle {
+    font-family: var(--font-outfit);
+    font-weight: 950;
+    font-style: italic;
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.scanSubtitle {
+    font-size: 0.8rem;
+    color: #71717a;
+    margin-bottom: 2rem;
+}
+
+.cancelButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #3f3f46;
+    border-radius: 12px;
+    color: #a1a1aa;
+    font-family: var(--font-outfit);
+    font-weight: 800;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cancelButton:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #f87171;
+    color: #f87171;
+}

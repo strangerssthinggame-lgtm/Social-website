@@ -1,0 +1,101 @@
+.section {
+    padding: 10rem 0;
+    background: linear-gradient(180deg, var(--color-primary) 0%, #F59E0B 100%);
+    color: black;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.title {
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    margin-bottom: 2rem;
+    color: black;
+}
+
+.description {
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.4;
+}
+
+.waitlistForm {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.formRow {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.emailInput {
+    flex: 1;
+    min-width: 280px;
+    padding: 1.1rem 1.75rem;
+    font-size: 1.1rem;
+    border: 3px solid black;
+    border-radius: 16px;
+    background: white;
+    font-weight: 600;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.emailInput:focus {
+    border-color: black;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.15), 0 4px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+.emailInput::placeholder {
+    color: #71717a;
+    font-weight: 500;
+}
+
+.note {
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 5rem 0;
+    }
+
+    .title {
+        font-size: clamp(2.5rem, 8vw, 3.5rem);
+        margin-bottom: 1.5rem;
+    }
+
+    .description {
+        font-size: 1.15rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .emailInput {
+        min-width: 100%;
+        font-size: 1rem;
+        padding: 0.9rem 1.25rem;
+    }
+
+    .note {
+        font-size: 0.9rem;
+        margin-top: 1.5rem;
+    }
+}

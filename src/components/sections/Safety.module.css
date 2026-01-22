@@ -1,0 +1,192 @@
+.section {
+    padding: 8rem 0;
+    background-color: var(--surface);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.content {
+    text-align: left;
+}
+
+.label {
+    color: var(--color-secondary);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.75rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.title {
+    margin-bottom: 2rem;
+}
+
+.description {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 4rem;
+    font-weight: 500;
+}
+
+.safetyList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.safetyItem {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.checkIcon {
+    width: 32px;
+    height: 32px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: 950;
+    font-size: 0.8rem;
+    border: 2px solid black;
+    flex-shrink: 0;
+}
+
+.safetyItem h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.safetyItem p {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.visual {
+    background: white;
+    padding: 4rem 3rem;
+    border-radius: 40px;
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+    border: 2px solid var(--border);
+    transform: rotate(2deg);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.visual:hover {
+    transform: rotate(0deg) scale(1.05);
+    border-color: var(--color-primary);
+}
+
+.shieldIcon {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.visual h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.badgeWall {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    font-size: 0.75rem;
+    font-weight: 900;
+    font-style: italic;
+    color: black;
+    border: 2px solid black;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    background: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 4rem 0;
+    }
+
+    .grid {
+        gap: 3rem;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1.05rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .safetyItem {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .safetyItem h4 {
+        font-size: 1.1rem;
+    }
+
+    .safetyItem p {
+        font-size: 0.95rem;
+    }
+
+    .visual {
+        padding: 2.5rem 2rem;
+        transform: rotate(0deg);
+    }
+
+    .shieldIcon {
+        font-size: 4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .visual h3 {
+        font-size: 1.5rem;
+    }
+
+    .badgeWall {
+        gap: 0.75rem;
+        margin-top: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: 1.2fr 1fr;
+    }
+}

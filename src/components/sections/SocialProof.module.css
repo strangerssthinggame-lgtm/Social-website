@@ -1,0 +1,141 @@
+.section {
+    padding: 10rem 0;
+    background-color: var(--background);
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.card {
+    background: var(--surface);
+    padding: 3.5rem 2.5rem;
+    border-radius: 40px;
+    border: 2px solid var(--border);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    background-color: var(--color-primary);
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-lg);
+}
+
+.card:hover .quote {
+    color: var(--color-accent);
+}
+
+.card:hover .avatar {
+    background: white;
+    border-color: var(--color-accent);
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 950;
+    font-style: italic;
+    color: black;
+    border: 2px solid black;
+}
+
+.authorInfo h4 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.authorInfo p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-tertiary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 8rem;
+    padding: 4rem 2rem;
+    background: var(--color-accent);
+    border-radius: 50px;
+    color: white;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.statItem {
+    text-align: center;
+}
+
+.statValue {
+    display: block;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 950;
+    font-style: italic;
+    font-family: var(--font-outfit);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.statLabel {
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    opacity: 0.7;
+    letter-spacing: 0.15em;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

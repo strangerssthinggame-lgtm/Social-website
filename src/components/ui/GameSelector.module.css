@@ -8,6 +8,16 @@
     /* Removed max-width and margin-top as it's separate */
 }
 
+@media (max-width: 768px) {
+    .container {
+        flex-direction: row;
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+}
+
 .selectorBtn {
     width: 64px;
     height: 64px;

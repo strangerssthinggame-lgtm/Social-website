@@ -133,11 +133,11 @@ export const AppPreview: React.FC = () => {
 
                     <div className={styles.controls}>
                         {currentSlide > 0 && (
-                            <button onClick={prevSlide} className={styles.backBtn}>
+                            <button onClick={prevSlide} className={styles.backBtn} suppressHydrationWarning>
                                 <ArrowLeft size={18} />
                             </button>
                         )}
-                        <button onClick={nextSlide} className={styles.mainBtn}>
+                        <button onClick={nextSlide} className={styles.mainBtn} suppressHydrationWarning>
                             <span>{currentSlide === slides.length - 1 ? 'GET STARTED' : 'CONTINUE'}</span>
                             <div className={styles.btnIcon}>
                                 <ArrowRight size={16} strokeWidth={3} />

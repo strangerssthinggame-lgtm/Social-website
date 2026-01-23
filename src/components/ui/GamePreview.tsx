@@ -207,6 +207,7 @@ export const GamePreview: React.FC<GamePreviewProps> = ({
                                 ? { color: 'black', background: 'rgba(0,0,0,0.05)' }
                                 : {}
                             }
+                            suppressHydrationWarning
                         >
                             <ChevronLeft size={20} />
                         </button>
@@ -326,7 +327,7 @@ export const GamePreview: React.FC<GamePreviewProps> = ({
                                 </div>
                                 <h3 className={styles.scanTitle}>FINDING SOULS...</h3>
                                 <p className={styles.scanSubtitle}>Looking for someone to play {selectedGame.label}</p>
-                                <button className={styles.cancelButton} onClick={() => setView('detail')}>
+                                <button className={styles.cancelButton} onClick={() => setView('detail')} suppressHydrationWarning>
                                     <X size={16} />
                                     <span>CANCEL</span>
                                 </button>
@@ -340,10 +341,10 @@ export const GamePreview: React.FC<GamePreviewProps> = ({
             {
                 view === 'detail' && !isPlaying && (
                     <div className={styles.stickyFooter}>
-                        <button className={styles.inviteButton}>
+                        <button className={styles.inviteButton} suppressHydrationWarning>
                             <UserPlus size={20} color="#71717a" />
                         </button>
-                        <button className={styles.findMatchButton} onClick={handlePlayAction}>
+                        <button className={styles.findMatchButton} onClick={handlePlayAction} suppressHydrationWarning>
                             <Play size={20} fill="black" />
                             <span>{ctaText}</span>
                         </button>

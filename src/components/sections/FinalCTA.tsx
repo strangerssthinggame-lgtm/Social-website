@@ -19,8 +19,9 @@ export const FinalCTA: React.FC = () => {
                             type="email"
                             placeholder="Enter your email"
                             className={styles.emailInput}
+                            suppressHydrationWarning
                         />
-                        <Button variant="white" size="lg">
+                        <Button variant="white" size="lg" suppressHydrationWarning>
                             Join Waitlist
                         </Button>
                     </form>

@@ -21,6 +21,7 @@ export const GameSelector: React.FC<GameSelectorProps> = ({ selectedGameId, onSe
                     className={`${styles.selectorBtn} ${selectedGameId === game.id ? styles.active : ''}`}
                     onClick={() => onSelectGame(game.id)}
                     aria-label={`Select ${game.label}`}
+                    suppressHydrationWarning
                 >
                     <div className={styles.iconWrapper}>
                         <game.icon size={24} />

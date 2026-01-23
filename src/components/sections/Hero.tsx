@@ -31,8 +31,9 @@ export const Hero: React.FC = () => {
                                 placeholder="Enter your email"
                                 className={styles.emailInput}
                                 required
+                                suppressHydrationWarning
                             />
-                            <Button size="md" type="submit" variant="primary">
+                            <Button size="md" type="submit" variant="primary" suppressHydrationWarning>
                                 Join Waitlist
                             </Button>
                         </form>

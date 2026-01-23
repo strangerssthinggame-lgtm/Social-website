@@ -20,11 +20,11 @@ const PAIRS_BY_VIBE: Record<string, { a: string, b: string }[]> = {
         { a: "Choose comfort", b: "Choose passion" }
     ],
     spicy: [
-        { a: "Chemistry", b: "Compatibility" },
-        { a: "Emotional Intimacy", b: "Physical Intimacy" },
-        { a: "Long Buildup", b: "Immediate Chemistry" },
-        { a: "One Perfect", b: "Many Good" },
-        { a: "Physical Attraction", b: "Emotional Connection" }
+        { a: "Lights ON", b: "Lights OFF" },
+        { a: "Top", b: "Bottom" },
+        { a: "Rough", b: "Sensual" },
+        { a: "Give Control", b: "Take Control" },
+        { a: "Talk Dirty", b: "Silent Heat" }
     ]
 };
 

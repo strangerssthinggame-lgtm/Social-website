@@ -1,4 +1,4 @@
-.container {
+﻿.container {
     width: 100%;
     height: 100%;
     background-color: #09090b;
@@ -76,125 +76,75 @@
     display: none;
 }
 
-/* Header Title */
-.headerTitle {
-    font-family: var(--font-outfit);
-    font-weight: 800;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-}
-
 /* List View */
-.listView {
-    padding-top: 5rem;
-    padding-bottom: 2rem;
-    animation: fadeIn 0.3s ease;
+.lobbyHeader {
+    padding: 4.5rem 1rem 1rem;
 }
 
-.listHeader {
-    padding: 0 1.5rem 1.5rem;
-}
-
-.listHeader h3 {
+.lobbyHeader h3 {
     font-family: var(--font-outfit);
     font-weight: 950;
     font-style: italic;
-    font-size: 1.75rem;
-    color: white;
+    font-size: 1.5rem;
+    color: var(--color-primary);
     text-transform: uppercase;
-    margin: 0 0 0.5rem 0;
-    line-height: 1;
-}
-
-.listHeader p {
-    font-size: 0.85rem;
-    color: #a1a1aa;
     margin: 0;
 }
 
-.gamesList {
+.gameList {
+    padding: 0 1rem 2rem;
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    padding: 0 1rem;
+    gap: 8px;
 }
 
-.gameListItem {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+.gameCard {
     background: #111;
     border: 1px solid #27272a;
-    padding: 16px;
-    border-radius: 20px;
+    border-radius: 16px;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
     cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.2s ease;
 }
 
-.gameListItem:active {
-    transform: scale(0.98);
+.gameCard:hover {
+    border-color: var(--color-primary);
+    transform: scale(1.02);
 }
 
-.gameListItem:hover {
-    background: #18181b;
-    border-color: #3f3f46;
-}
-
-.listIconBox {
-    width: 48px;
-    height: 48px;
-    border-radius: 14px;
+.gameIcon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-shrink: 0;
 }
 
-.listInfo {
+.gameInfo {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 4px;
-    overflow: hidden;
 }
 
-.listName {
-    font-family: var(--font-outfit);
-    font-weight: 800;
-    font-size: 0.95rem;
-    color: white;
+.gameLabel {
+    font-size: 0.85rem;
+    font-weight: 900;
     text-transform: uppercase;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    letter-spacing: 0.02em;
 }
 
-.listTagline {
-    font-size: 0.75rem;
+.gameSub {
+    font-size: 0.65rem;
     color: #71717a;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.listArrow {
-    opacity: 0.5;
-    transition: opacity 0.2s;
-}
-
-.gameListItem:hover .listArrow {
-    opacity: 1;
-    color: white !important;
+    font-weight: 600;
 }
 
 /* Detail View */
 .detailView {
-    padding-top: 1rem;
     animation: slideIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
@@ -207,16 +157,6 @@
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
     }
 }
 
@@ -312,6 +252,8 @@
     background: rgba(255, 255, 255, 0.03);
 }
 
+/* Icon styles passed inline */
+
 .diffLabel {
     font-size: 0.65rem;
     font-weight: 900;
@@ -364,6 +306,27 @@
     cursor: pointer;
 }
 
+.bottomNav {
+    height: 50px;
+    background-color: #09090b;
+    border-top: 1px solid #1f1f22;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.navDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #3f3f46;
+}
+
+.active .navDot {
+    background: var(--color-primary);
+    box-shadow: 0 0 10px var(--color-primary);
+}
 /* Scanning UI */
 .scanningOverlay {
     position: absolute;
@@ -376,13 +339,17 @@
     animation: fadeIn 0.3s ease;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 .scanningContent {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     padding: 2rem;
-    width: 100%;
 }
 
 .scanPulse {
@@ -418,7 +385,6 @@
         transform: translate(-50%, -50%) scale(0.5);
         opacity: 0.8;
     }
-
     100% {
         transform: translate(-50%, -50%) scale(1.5);
         opacity: 0;

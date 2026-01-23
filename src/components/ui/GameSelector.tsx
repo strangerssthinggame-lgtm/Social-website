@@ -5,7 +5,7 @@ import styles from './GameSelector.module.css';
 import { GAMES } from './GamePreview';
 
 interface GameSelectorProps {
-    selectedGameId: string;
+    selectedGameId: string | undefined | null;
     onSelectGame: (id: string) => void;
 }
 

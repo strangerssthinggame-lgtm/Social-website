@@ -7,7 +7,7 @@ import { GamePreview } from '../ui/GamePreview';
 import { GameSelector } from '../ui/GameSelector';
 
 export const ProductDemo: React.FC = () => {
-    const [selectedGame, setSelectedGame] = useState('nhie');
+    const [selectedGame, setSelectedGame] = useState<string | undefined>('nhie');
 
     return (
         <section className={styles.section} id="games">

@@ -24,7 +24,7 @@ export const Solution: React.FC = () => {
                         <div className={styles.phoneFrame}>
                             <div className={styles.notch}></div>
                             <div className={styles.screen} style={{ padding: 0 }}>
-                                <GamePreview />
+                                <GamePreview ctaText="PLAY NOW" ctaAction="scan" />
                             </div>
                         </div>
                     </div>

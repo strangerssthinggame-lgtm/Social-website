@@ -12,7 +12,7 @@ export const ProductDemo: React.FC = () => {
     return (
         <section className={styles.section} id="games">
             <div className={styles.container}>
-                <h2 className={styles.headline}>The Games that Connect You</h2>
+                <h2 className={styles.headline}>The Games that <span className="highlight">Connect</span> You</h2>
 
                 <div className={styles.demoContainer}>
                     <div className={styles.phoneFrame}>

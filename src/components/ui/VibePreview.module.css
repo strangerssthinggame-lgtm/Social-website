@@ -23,7 +23,8 @@
 
 .content {
     flex: 1;
-    padding: 1.5rem 1.25rem 2rem;
+    padding: 1rem 1rem 1.5rem;
+    /* Reduced padding */
     display: flex;
     flex-direction: column;
 }
@@ -34,7 +35,8 @@
     font-family: var(--font-outfit);
     font-weight: 900;
     font-style: italic;
-    font-size: 1.85rem;
+    font-size: 1.5rem;
+    /* Reduced from 1.85rem */
     line-height: 0.9;
     margin-bottom: 0.25rem;
     text-transform: uppercase;
@@ -43,24 +45,28 @@
 }
 
 .subtitle {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+    /* Reduced from 0.75rem */
     color: #a1a1aa;
     line-height: 1.4;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    /* Reduced margin */
     font-weight: 600;
 }
 
 .slots {
     display: flex;
     flex-direction: column;
-    gap: 0.85rem;
+    gap: 0.6rem;
+    /* Reduced from 0.85rem */
 }
 
 .slot {
     width: 100%;
     border-radius: 12px;
     border: 1px solid #3f3f46;
-    padding: 0.75rem 1rem;
+    padding: 0.6rem 0.85rem;
+    /* Reduced padding */
     position: relative;
     transition: transform 0.2s ease;
     cursor: pointer;
@@ -88,7 +94,8 @@
 }
 
 .questionText {
-    font-size: 0.6rem;
+    font-size: 0.55rem;
+    /* Reduced from 0.6rem */
     font-weight: 900;
     text-transform: uppercase;
     color: #71717a;
@@ -98,15 +105,17 @@
 .slotMain {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 .answerEmoji {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    /* Reduced */
 }
 
 .answerText {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    /* Reduced */
     font-weight: 800;
     text-transform: uppercase;
     color: white;
@@ -131,13 +140,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
-    padding: 0.5rem 0;
+    gap: 6px;
+    padding: 0.25rem 0;
 }
 
 .plusCircle {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    /* Reduced */
+    height: 28px;
+    /* Reduced */
     border-radius: 50%;
     border: 2px solid #3f3f46;
     display: flex;
@@ -147,7 +158,7 @@
 }
 
 .addLabel {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     font-weight: 800;
     color: #71717a;
     text-transform: uppercase;
@@ -155,10 +166,12 @@
 }
 
 .tipBox {
-    margin-top: 1rem;
+    margin-top: 0.75rem;
+    /* Reduced margin */
     margin-bottom: 0.25rem;
     background: rgba(250, 204, 21, 0.1);
-    padding: 0.6rem 0.75rem;
+    padding: 0.5rem 0.75rem;
+    /* Reduced padding */
     border-radius: 10px;
     display: flex;
     gap: 8px;
@@ -226,6 +239,8 @@
     font-size: 1rem;
     text-transform: uppercase;
     margin: 0 0 1.25rem;
+    color: white;
+    /* Fix visibility */
 }
 
 .sheetScroll {
@@ -255,6 +270,8 @@
     gap: 12px;
     cursor: pointer;
     transition: all 0.2s ease;
+    color: white;
+    /* Fix list text visibility */
 }
 
 .questionItem:hover {
@@ -264,6 +281,8 @@
 .questionItem span {
     font-weight: 700;
     font-size: 0.85rem;
+    color: white;
+    /* Explicitly white */
 }
 
 .answerGrid {
@@ -285,6 +304,8 @@
     gap: 8px;
     cursor: pointer;
     transition: all 0.2s ease;
+    color: white;
+    /* Fix answer text visibility */
 }
 
 .answerItem:hover {
@@ -300,4 +321,6 @@
     font-weight: 800;
     font-size: 0.7rem;
     text-transform: uppercase;
+    color: white;
+    /* Explicitly white */
 }

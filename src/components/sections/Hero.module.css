@@ -46,7 +46,7 @@
 }
 
 .headline {
-    font-size: clamp(3.5rem, 10vw, 5.5rem);
+    font-size: clamp(3.5rem, 8vw, 4.5rem);
     margin-bottom: 2rem;
 }
 
@@ -100,6 +100,13 @@
     transform: translateY(-1px);
 }
 
+.submitButton {
+    height: 64px !important;
+    font-size: 1.05rem !important;
+    /* Slight bump to match larger input */
+    padding: 0 2rem !important;
+}
+
 .ctaGroup {
     display: flex;
     flex-direction: column;
@@ -116,28 +123,57 @@
 .phoneFrame {
     width: 320px;
     height: 640px;
-    background: #18181b;
-    border-radius: 44px;
-    padding: 6px;
+    background: #121212;
+    /* Darker frame */
+    border-radius: 56px;
+    /* Smooth continuous corners */
+    padding: 8px;
+    /* Thinner bezel */
     box-shadow:
-        0 0 0 2px #3f3f46,
-        0 0 0 6px #18181b,
+        0 0 0 4px #2a2a2a,
+        /* Outer metallic band */
+        0 0 0 5px #1a1a1a,
+        /* Inner dark band */
         0 30px 80px rgba(0, 0, 0, 0.6);
     position: relative;
     transform: rotate(0deg) scale(1.05);
     transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 10;
+}
+
+.notch {
+    position: absolute;
+    top: 18px;
+    /* Floating Dynamic Island */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 96px;
+    height: 26px;
+    background: #000;
+    border-radius: 100px;
+    /* Pill shape */
+    z-index: 20;
+    transition: all 0.3s ease;
 }
 
 .screen {
     width: 100%;
     height: 100%;
     background: #09090b;
-    border-radius: 38px;
+    /* Ensure solid background */
+    border-radius: 48px;
+    /* Match frame curve */
     overflow: hidden;
     display: flex;
     flex-direction: column;
     padding: 2rem 1.5rem;
-    border: 1px solid #ddd;
+    border: 1px solid #333;
+    /* Darker border */
+    /* Fix for overflow bleeding on mobile */
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    mask-image: radial-gradient(white, black);
+    transform: translateZ(0);
+    /* Force GPU layer */
 }
 
 .appHeader {
@@ -190,26 +226,32 @@
 
     .content {
         text-align: center;
-    }
-
-    .headline {
-        font-size: clamp(2.5rem, 8vw, 3.5rem);
-        margin-bottom: 1.5rem;
-    }
-
-    .subheadline {
-        font-size: 1.05rem;
-        margin-bottom: 2rem;
+        width: 100%;
         max-width: 100%;
+    }
+
+    .ctaGroup {
+        width: 100%;
     }
 
     .waitlistForm {
         flex-direction: column;
         max-width: 100%;
+        width: 100%;
+        align-items: stretch;
+        /* Explicitly force stretch */
     }
 
     .emailInput {
         height: 56px;
+        width: 100%;
+        /* Full width */
+    }
+
+    /* Override the desktop !important height */
+    .submitButton {
+        height: 56px !important;
+        width: 100% !important;
     }
 
     .phoneFrame {
@@ -226,6 +268,34 @@
     .tagline {
         font-size: 0.7rem;
         padding: 0.4rem 0.8rem;
+    }
+
+    /* Fix overflow for "Connecting" */
+    .headline {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Constrain form width so it's not edge-to-edge */
+    .waitlistForm {
+        max-width: 340px !important;
+        margin: 0 auto;
+    }
+
+    .emailInput {
+        height: 60px;
+        /* Increased from 54px for "thicker" look */
+        font-size: 1rem;
+        /* Slightly larger text */
+        border-width: 3px;
+        /* Ensure border is visible */
+    }
+
+    .submitButton {
+        height: 60px !important;
+        /* Match input height */
+        font-size: 1.05rem !important;
+        /* Slightly larger font */
     }
 }
 

@@ -218,7 +218,7 @@ export const GamePreview: React.FC<GamePreviewProps> = ({
 
                     {/* Title or Logo in Header */}
                     <div className={styles.headerTitle}>
-                        {view === 'list' ? 'Arcade' :
+                        {view === 'list' ? '' :
                             view === 'detail' ? '' :
                                 view === 'scanning' ? 'Scanning' :
                                     'Playing'}
@@ -236,7 +236,7 @@ export const GamePreview: React.FC<GamePreviewProps> = ({
                     view === 'list' && (
                         <div className={styles.listView}>
                             <div className={styles.listHeader}>
-                                <h3>Available Games</h3>
+                                <h3>Demo Games</h3>
                                 <p>Select a game to start playing</p>
                             </div>
                             <div className={styles.gamesList}>

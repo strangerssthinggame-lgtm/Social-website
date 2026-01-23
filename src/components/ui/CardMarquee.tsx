@@ -9,27 +9,43 @@ interface Game {
 }
 
 const row1Games: Game[] = [
-    { label: 'TruthShot', icon: '💬' },
-    { label: 'DareLite', icon: '🔥' },
-    { label: 'This/That', icon: '⇄' },
-    { label: 'WouldU', icon: '❓' },
-    { label: 'VibeCheck', icon: '✨' },
+    { label: 'Couple Quiz', icon: '❤️' },
+    { label: 'Love Language', icon: '💌' },
+    { label: 'First Date Sim', icon: '☕' },
+    { label: 'Rel. Goals', icon: '🚀' },
+    { label: 'Truth or Dare', icon: '🔥' },
 ];
 
 const row2Games: Game[] = [
-    { label: 'RapidFire', icon: '⚡' },
-    { label: 'TwoTruths', icon: '💬' },
-    { label: 'RedGreen', icon: '🚩' },
-    { label: 'DateBuild', icon: '❤️' },
-    { label: 'MatchTiles', icon: '⏹' },
+    { label: 'Never Have I Ever', icon: '🍺' },
+    { label: 'Most Likely To', icon: '👉' },
+    { label: '2 Truths 1 Lie', icon: '🤞' },
+    { label: 'Story Builder', icon: '📖' },
+    { label: 'Emoji Challenge', icon: '🤪' },
 ];
 
 const row3Games: Game[] = [
-    { label: 'EmoStory', icon: '😊' },
-    { label: 'PickOne', icon: '🖱' },
-    { label: 'NeverEver', icon: '✋' },
-    { label: 'MoodCards', icon: '🎴' },
-    { label: 'CrushQ', icon: '🔍' },
+    { label: 'Picture This', icon: '🎨' },
+    { label: 'Rhyme Time', icon: '🎵' },
+    { label: 'Would You Rather', icon: '⚖️' },
+    { label: 'This or That', icon: '🆚' },
+    { label: 'Hot Takes', icon: '🌶️' },
+];
+
+const row4Games: Game[] = [
+    { label: 'Friend Zone', icon: '🤝' },
+    { label: 'Personality Match', icon: '🧩' },
+    { label: 'Compatibility', icon: '💯' },
+    { label: 'Couple Trivia', icon: '🧠' },
+    { label: 'Memory Lane', icon: '📸' },
+];
+
+const row5Games: Game[] = [
+    { label: 'Speed Dating', icon: '⏱️' },
+    { label: 'Convo Starters', icon: '💬' },
+    { label: 'Get To Know', icon: '👋' },
+    { label: 'Dare Roulette', icon: '🎰' },
+    { label: 'Bucket List', icon: '📝' },
 ];
 
 const ScrollingRow = ({ games, direction = 'left', duration = '20s', rotate = '0deg', filled = false, yellow = false }: {
@@ -73,10 +89,10 @@ export const CardMarquee: React.FC = () => {
                 <ScrollingRow games={row3Games} direction="left" duration="25s" yellow />
             </div>
             <div style={{ transform: 'translateY(10%) rotate(8deg)', opacity: 0.5 }}>
-                <ScrollingRow games={row1Games} direction="right" duration="50s" filled />
+                <ScrollingRow games={row4Games} direction="right" duration="50s" filled />
             </div>
             <div style={{ transform: 'translateY(15%) rotate(-4deg)', opacity: 0.8 }}>
-                <ScrollingRow games={row2Games} direction="left" duration="35s" />
+                <ScrollingRow games={row5Games} direction="left" duration="35s" />
             </div>
         </div>
     );

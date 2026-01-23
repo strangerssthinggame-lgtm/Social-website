@@ -57,16 +57,19 @@
 }
 
 .miniCard {
-    width: 140px;
-    height: 60px;
+    width: 110px;
+    /* Reduced from 140px */
+    height: 48px;
+    /* Reduced from 60px */
     background: #111113;
     border: 2px solid #1F1F22;
-    border-radius: 12px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    font-size: 0.65rem;
+    gap: 6px;
+    font-size: 0.55rem;
+    /* Reduced font */
     font-weight: 900;
     text-transform: uppercase;
     font-style: italic;
@@ -86,13 +89,13 @@
     background: linear-gradient(to bottom, transparent, rgba(9, 9, 11, 0.7) 40%, rgba(9, 9, 11, 0.95) 60%, #09090b 80%);
     display: flex;
     flex-direction: column;
-    padding: 2.5rem 1.5rem;
+    padding: 1.5rem 1rem;
 }
 
 .logoRow {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .appLogo {
@@ -100,14 +103,14 @@
     font-weight: 950;
     font-style: italic;
     color: var(--color-primary);
-    font-size: 1.25rem;
+    font-size: 1rem;
     letter-spacing: -0.05em;
 }
 
 .slidesContainer {
     flex: 1;
     position: relative;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .slide {
@@ -127,13 +130,15 @@
 }
 
 .iconBox {
-    width: 64px;
-    height: 64px;
-    border-radius: 18px;
+    width: 40px;
+    /* Reduced from 48px */
+    height: 40px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
+    /* Reduced margin */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
@@ -141,55 +146,57 @@
     font-family: var(--font-outfit);
     font-weight: 900;
     font-style: italic;
-    font-size: 2.25rem;
-    line-height: 1;
-    margin-bottom: 1rem;
+    font-size: 1.35rem;
+    /* Reduced from 1.75rem */
+    line-height: 0.95;
+    margin-bottom: 0.5rem;
     text-transform: uppercase;
     color: white;
 }
 
 .slideDescription {
     color: white;
-    font-size: 0.85rem;
-    line-height: 1.5;
-    max-width: 90%;
+    font-size: 0.75rem;
+    /* Reduced from 0.8rem */
+    line-height: 1.3;
+    max-width: 100%;
 }
 
 .footer {
-    padding-top: 1rem;
+    padding-top: 0.5rem;
 }
 
 .dots {
     display: flex;
-    gap: 8px;
-    margin-bottom: 1.5rem;
+    gap: 6px;
+    margin-bottom: 1rem;
 }
 
 .dot {
-    height: 8px;
-    width: 8px;
+    height: 6px;
+    width: 6px;
     background: #3f3f46;
-    border-radius: 4px;
+    border-radius: 3px;
     transition: all 0.3s ease;
 }
 
 .activeDot {
-    width: 32px;
+    width: 24px;
     background: var(--color-primary);
 }
 
 .controls {
     display: flex;
-    gap: 1rem;
-    height: 54px;
+    gap: 0.75rem;
+    height: 48px;
 }
 
 .backBtn {
-    width: 54px;
-    height: 54px;
+    width: 48px;
+    height: 48px;
     background: #27272a;
     border: 2px solid #3f3f46;
-    border-radius: 16px;
+    border-radius: 14px;
     color: white;
     display: flex;
     align-items: center;
@@ -222,6 +229,73 @@
     border: 2px solid black;
     border-radius: 50%;
     display: flex;
+    /* Added explicit display flex */
     align-items: center;
     justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .overlayGradient {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .logoRow {
+        margin-bottom: 2rem;
+    }
+
+    .appLogo {
+        font-size: 1.25rem;
+    }
+
+    .slidesContainer {
+        margin-top: 2rem;
+    }
+
+    .iconBox {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 1.5rem;
+        border-radius: 18px;
+    }
+
+    .slideTitle {
+        font-size: 2.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .slideDescription {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        max-width: 90%;
+    }
+
+    .footer {
+        padding-top: 1rem;
+    }
+
+    .dots {
+        margin-bottom: 1.5rem;
+        gap: 8px;
+    }
+
+    .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+    }
+
+    .activeDot {
+        width: 32px;
+    }
+
+    .controls {
+        height: 54px;
+        gap: 1rem;
+    }
+
+    .backBtn {
+        width: 54px;
+        height: 54px;
+        border-radius: 16px;
+    }
 }

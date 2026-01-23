@@ -158,7 +158,7 @@ export const VibePreview: React.FC = () => {
                 <div className={styles.tipBox}>
                     <Sparkles size={12} color="var(--color-primary)" fill="var(--color-primary)" />
                     <p className={styles.tipText}>
-                        <strong>BONDLY TIP:</strong> We&apos;ll ask new connections to guess your answers to see if you vibe.
+                        <strong>PRO TIP:</strong> We&apos;ll ask new connections to guess your answers to see if you vibe.
                     </p>
                 </div>
             </div>

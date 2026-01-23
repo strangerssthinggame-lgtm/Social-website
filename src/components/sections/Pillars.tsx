@@ -30,7 +30,7 @@ export const Pillars: React.FC = () => {
         <section className={styles.section}>
             <div className={styles.container}>
                 <div className={styles.intro}>
-                    <h2 className={styles.sectionHeadline}>Why Realer is Different</h2>
+                    <h2 className={styles.sectionHeadline}>Why <span className="highlight">Bondly</span> is Different</h2>
                     <p style={{ color: 'var(--text-secondary)' }}>More than just another dating app. A new way to meet.</p>
                 </div>
 

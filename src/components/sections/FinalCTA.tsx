@@ -10,7 +10,7 @@ export const FinalCTA: React.FC = () => {
             <div className={styles.container}>
                 <h2 className={styles.title}>Ready to Break the Ice?</h2>
                 <p className={styles.description}>
-                    Join students who are waiting to stop swiping and start playing. Be the first to know when Realer launches.
+                    Join students who are waiting to stop swiping and start playing. Be the first to know when Bondly launches.
                 </p>
 
                 <div className={styles.waitlistForm}>

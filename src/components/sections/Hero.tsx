@@ -22,7 +22,7 @@ export const Hero: React.FC = () => {
                         Start <span className="highlight">Connecting.</span>
                     </h1>
                     <p className={styles.subheadline}>
-                        Break the ice without the cringe. Realer uses 25+ interactive games to help you make real connections.
+                        Break the ice without the cringe. Bondly uses 25+ interactive games to help you make real connections.
                     </p>
                     <div className={styles.ctaGroup}>
                         <form className={styles.waitlistForm} onSubmit={(e) => e.preventDefault()}>
@@ -33,7 +33,13 @@ export const Hero: React.FC = () => {
                                 required
                                 suppressHydrationWarning
                             />
-                            <Button size="md" type="submit" variant="primary" suppressHydrationWarning>
+                            <Button
+                                size="md"
+                                type="submit"
+                                variant="primary"
+                                className={styles.submitButton}
+                                suppressHydrationWarning
+                            >
                                 Join Waitlist
                             </Button>
                         </form>

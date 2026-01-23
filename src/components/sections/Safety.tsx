@@ -25,7 +25,7 @@ export const Safety: React.FC = () => {
                         <span className={styles.label}>Safety First</span>
                         <h2 className={styles.title}>Your <span className="highlight">Safety</span> is Our Top Priority</h2>
                         <p className={styles.description}>
-                            We've built Realer from the ground up to be the safest place for college students to meet. No bots, no bad actors, just real students.
+                            We&apos;ve built Bondly from the ground up to be the safest place for college students to meet. No bots, no bad actors, just real students.
                         </p>
 
                         <div className={styles.safetyList}>
@@ -44,7 +44,6 @@ export const Safety: React.FC = () => {
                     <div className={styles.visual}>
                         <div className={styles.shieldIcon}>🛡️</div>
                         <h3>Verified <span className="highlight">Campus Community</span></h3>
-                        <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>Trusted by students at 180+ universities.</p>
 
                         <div className={styles.badgeWall}>
                             <div className={styles.badge}>.EDU VERIFIED</div>

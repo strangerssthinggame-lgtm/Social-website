@@ -91,28 +91,32 @@
 
 /* List View */
 .listView {
-    padding-top: 5rem;
+    padding-top: 3.5rem;
+    /* Reduced from 4rem */
     padding-bottom: 2rem;
     animation: fadeIn 0.3s ease;
 }
 
 .listHeader {
-    padding: 0 1.5rem 1.5rem;
+    padding: 0 1rem 0.75rem;
+    /* Reduced padding */
 }
 
 .listHeader h3 {
     font-family: var(--font-outfit);
     font-weight: 950;
     font-style: italic;
-    font-size: 1.75rem;
+    font-size: 1.2rem;
+    /* Reduced from 1.35rem */
     color: white;
     text-transform: uppercase;
-    margin: 0 0 0.5rem 0;
+    margin: 0 0 0.25rem 0;
     line-height: 1;
 }
 
 .listHeader p {
-    font-size: 0.85rem;
+    font-size: 0.7rem;
+    /* Reduced from 0.75rem */
     color: #a1a1aa;
     margin: 0;
 }
@@ -120,35 +124,34 @@
 .gamesList {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    padding: 0 1rem;
+    gap: 6px;
+    /* Reduced from 8px */
+    padding: 0 0.75rem;
+    /* Reduced side padding */
 }
 
 .gameListItem {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
+    /* Reduced gap */
     background: #111;
     border: 1px solid #27272a;
-    padding: 16px;
-    border-radius: 20px;
+    padding: 10px;
+    /* Reduced from 12px */
+    border-radius: 14px;
+    /* Reduced from 16px */
     cursor: pointer;
     transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.gameListItem:active {
-    transform: scale(0.98);
-}
-
-.gameListItem:hover {
-    background: #18181b;
-    border-color: #3f3f46;
-}
+/* ... existing code ... */
 
 .listIconBox {
-    width: 48px;
-    height: 48px;
-    border-radius: 14px;
+    width: 36px;
+    /* Reduced from 40px */
+    height: 36px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,14 +162,15 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 2px;
     overflow: hidden;
 }
 
 .listName {
     font-family: var(--font-outfit);
     font-weight: 800;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    /* Reduced from 0.95rem */
     color: white;
     text-transform: uppercase;
     white-space: nowrap;
@@ -175,7 +179,8 @@
 }
 
 .listTagline {
-    font-size: 0.75rem;
+    font-size: 0.65rem;
+    /* Reduced from 0.75rem */
     color: #71717a;
     white-space: nowrap;
     overflow: hidden;
@@ -221,24 +226,33 @@
 }
 
 .heroSection {
-    padding: 5rem 1.5rem 1.5rem;
+    padding: 4.5rem 1.25rem 1rem;
+    /* Reduced top padding further */
+    text-align: center;
+    /* Center align for better balance */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .gameIconContainer {
-    width: 64px;
-    height: 64px;
-    border-radius: 16px;
+    width: 48px;
+    /* Reduced from 56px */
+    height: 48px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.75rem;
+    /* Reduced margin */
 }
 
 .gameTitle {
     font-family: var(--font-outfit);
     font-weight: 950;
     font-style: italic;
-    font-size: 1.75rem;
+    font-size: 1.25rem;
+    /* Reduced from 1.5rem */
     line-height: 1;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
@@ -247,63 +261,72 @@
 }
 
 .gameDescription {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    /* Reduced from 0.75rem */
     color: #a1a1aa;
     line-height: 1.4;
     font-weight: 500;
+    max-width: 90%;
+    /* Prevent text stretching too wide */
 }
 
 .statsRow {
+    /* Added class definition if missing, or update if exists */
     display: flex;
-    gap: 12px;
-    padding: 0 1.5rem;
-    margin-bottom: 2rem;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .statBox {
-    flex: 1;
-    background: #111;
-    border-radius: 16px;
-    padding: 12px;
+    /* Added class definition */
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 6px;
+    background: #111;
+    border: 1px solid #27272a;
+    padding: 6px 10px;
+    border-radius: 8px;
 }
 
 .statValue {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
+    /* Reduced from 0.65rem */
     font-weight: 900;
     text-transform: uppercase;
 }
 
 .difficultySection {
-    padding: 0 1.5rem;
+    padding: 0 1.25rem;
+    /* Reduced side padding */
 }
 
 .sectionTitle {
     font-family: var(--font-outfit);
     font-weight: 950;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    /* Reduced from 0.8rem */
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .difficultyGrid {
     display: flex;
-    gap: 10px;
+    gap: 8px;
+    /* Reduced from 10px */
 }
 
 .diffCard {
     flex: 1;
     background: #111;
     border: 2px solid #27272a;
-    border-radius: 14px;
-    padding: 1rem 0.5rem;
+    border-radius: 12px;
+    padding: 0.75rem 0.5rem;
+    /* Reduced vertical padding */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     cursor: pointer;
     transition: all 0.2s;
 }
@@ -327,41 +350,60 @@
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 1.5rem;
-    background: linear-gradient(to top, #09090b 80%, transparent);
+    padding: 1.25rem 1.5rem 1.5rem;
+    /* Adjusted padding */
+    background: linear-gradient(to top, #09090b 85%, transparent);
     display: flex;
     gap: 12px;
     z-index: 50;
 }
 
 .inviteButton {
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.05);
+    width: 52px;
+    /* Slightly larger */
+    height: 52px;
+    background: rgba(255, 255, 255, 0.08);
+    /* Brighter background */
     border: none;
-    border-radius: 14px;
+    border-radius: 16px;
+    /* Smooth corners */
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    transition: all 0.2s;
 }
 
 .findMatchButton {
     flex: 1;
-    height: 50px;
+    height: 54px;
+    /* Increased height */
     background: white;
     color: black;
     border: none;
-    border-radius: 14px;
+    border-radius: 16px;
+    /* Smooth corners */
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
     font-family: var(--font-outfit);
-    font-weight: 950;
-    font-size: 0.9rem;
+    font-weight: 800;
+    /* Bolder */
+    font-size: 0.95rem;
+    /* Larger font */
     text-transform: uppercase;
+    letter-spacing: 0.02em;
+    /* Better readability */
     cursor: pointer;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    /* Subtle glow */
+    transition: all 0.2s;
+}
+
+.findMatchButton:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.15);
 }
 
 /* Scanning UI */

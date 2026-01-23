@@ -4,14 +4,15 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './Header.module.css';
 import { Button } from '../ui/Button';
+import { throttle } from '@/utils/throttle';
 
 export const Header: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
-        const handleScroll = () => {
+        const handleScroll = throttle(() => {
             setIsScrolled(window.scrollY > 20);
-        };
+        }, 100);
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
@@ -33,13 +34,25 @@ export const Header: React.FC = () => {
         }
     };
 
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
+    // Close menu when clicking a link
+    const closeMenu = () => {
+        setIsMobileMenuOpen(false);
+    };
+
     return (
         <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
             <div className={`container ${styles.container}`}>
-                <Link href="/" className={styles.logo}>
-                    Realer
+                <Link href="/" className={styles.logo} onClick={closeMenu}>
+                    Bondly
                 </Link>
 
+                {/* Desktop Nav */}
                 <nav className={styles.nav}>
                     <Link href="#how-it-works" className={styles.navLink}>How It Works</Link>
                     <Link href="#games" className={styles.navLink}>Games</Link>
@@ -50,10 +63,22 @@ export const Header: React.FC = () => {
                     <Button size="sm" onClick={handleJoinWaitlist} variant={isScrolled ? "primary" : "primary"} className={styles.waitlistBtn}>
                         Join Waitlist
                     </Button>
-                    <button className={styles.mobileMenuBtn} aria-label="Menu">
-                        ☰
+                    <button
+                        className={styles.mobileMenuBtn}
+                        aria-label="Toggle navigation"
+                        aria-expanded={isMobileMenuOpen}
+                        onClick={toggleMenu}
+                    >
+                        {isMobileMenuOpen ? '✕' : '☰'}
                     </button>
                 </div>
+            </div>
+
+            {/* Mobile Menu Drawer */}
+            <div className={`${styles.mobileMenu} ${isMobileMenuOpen ? styles.mobileMenuOpen : ''}`}>
+                <Link href="#how-it-works" className={styles.mobileNavLink} onClick={closeMenu}>How It Works</Link>
+                <Link href="#games" className={styles.mobileNavLink} onClick={closeMenu}>Games</Link>
+                <Link href="#safety" className={styles.mobileNavLink} onClick={closeMenu}>Safety</Link>
             </div>
         </header>
     );

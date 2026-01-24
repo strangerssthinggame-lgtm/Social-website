@@ -6,20 +6,23 @@ import { ProductDemo } from "@/components/sections/ProductDemo";
 import { Safety } from "@/components/sections/Safety";
 import { Science } from "@/components/sections/Science";
 import { FinalCTA } from "@/components/sections/FinalCTA";
-import { Footer } from "@/components/layout/Footer"; 
+import { Footer } from "@/components/layout/Footer";
+import { WaitlistProvider } from "@/context/WaitlistContext";
 
 export default function Home() {
   return (
-    <main>
-      <Hero />
-      <Problem />
-      <Solution />
-      <Pillars />
-      <ProductDemo />
-      <Safety />
-      <Science />
-      <FinalCTA />
-      <Footer />
-    </main>
+    <WaitlistProvider>
+      <main>
+        <Hero />
+        <Problem />
+        <Solution />
+        <Pillars />
+        <ProductDemo />
+        <Safety />
+        <Science />
+        <FinalCTA />
+        <Footer />
+      </main>
+    </WaitlistProvider>
   );
 }

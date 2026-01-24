@@ -243,14 +243,16 @@
     }
 
     .emailInput {
-        height: 56px;
+        height: 56px !important;
+        min-height: 56px;
         width: 100%;
-        /* Full width */
+        flex: none;
     }
 
     /* Override the desktop !important height */
     .submitButton {
         height: 56px !important;
+        min-height: 56px;
         width: 100% !important;
     }
 
@@ -276,26 +278,26 @@
         margin-bottom: 1rem;
     }
 
-    /* Constrain form width so it's not edge-to-edge */
+    /* Full width on mobile for better touch targets */
+    /* Full width on mobile for better touch targets */
     .waitlistForm {
-        max-width: 340px !important;
+        max-width: 100% !important;
         margin: 0 auto;
     }
 
     .emailInput {
-        height: 60px;
-        /* Increased from 54px for "thicker" look */
-        font-size: 1rem;
-        /* Slightly larger text */
+        height: 56px !important;
+        min-height: 56px;
+        font-size: 1.1rem;
         border-width: 3px;
-        /* Ensure border is visible */
+        flex: none;
+        width: 100%;
     }
 
     .submitButton {
-        height: 60px !important;
-        /* Match input height */
-        font-size: 1.05rem !important;
-        /* Slightly larger font */
+        height: 56px !important;
+        min-height: 56px;
+        font-size: 1.1rem !important;
     }
 }
 

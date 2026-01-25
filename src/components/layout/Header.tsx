@@ -49,7 +49,7 @@ export const Header: React.FC = () => {
         <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
             <div className={`container ${styles.container}`}>
                 <Link href="/" className={styles.logo} onClick={closeMenu}>
-                    Bondly
+                    Infriend
                 </Link>
 
                 {/* Desktop Nav */}

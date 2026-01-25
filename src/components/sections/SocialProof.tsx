@@ -18,7 +18,7 @@ export const SocialProof: React.FC = () => {
         {
             name: "Marcus Miller",
             school: "UT Austin",
-            quote: "The games are a great icebreaker. Usually I don't know what to say after 'Hey', but Bondly fixes that completely.",
+            quote: "The games are a great icebreaker. Usually I don't know what to say after 'Hey', but Infriend fixes that completely.",
             initials: "MM"
         }
     ];

@@ -25,7 +25,7 @@ export const Hero: React.FC = () => {
                         Start <span className="highlight">Connecting.</span>
                     </h1>
                     <p className={styles.subheadline}>
-                        Break the ice without the cringe. Bondly uses 25+ interactive games to help you make real connections.
+                        Break the ice without the cringe. Infriend uses 25+ interactive games to help you make real connections.
                     </p>
                     <div className={styles.ctaGroup}>
                         {status === 'success' ? (

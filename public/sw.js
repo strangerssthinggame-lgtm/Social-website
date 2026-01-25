@@ -1,4 +1,4 @@
-const CACHE_NAME = 'realer-v1';
+const CACHE_NAME = 'infriend-v1';
 const urlsToCache = [
     '/',
     '/manifest.json'

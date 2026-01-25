@@ -84,7 +84,7 @@ export default function TermsOfService() {
 
                     <h2 style={{ fontSize: '1.5rem', marginTop: '2.5rem', marginBottom: '1rem' }}>11. Contact</h2>
                     <p>For questions about these Terms:</p>
-                    <p><strong>Email:</strong> <a href="mailto:hello@bondly.app" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>hello@bondly.app</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:hello@infriend.app" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>hello@infriend.app</a></p>
 
                     <p style={{ fontSize: '0.875rem', color: 'var(--text-tertiary)', marginTop: '3rem', fontStyle: 'italic' }}>
                         *This document is designed to meet general Google Play and Apple App Store policy expectations. It does not constitute legal advice.*

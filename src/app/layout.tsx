@@ -22,8 +22,8 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "Bondly - Gamify Your Connection | Dating App for College Students",
-  description: "Stop endless swiping. Bondly uses 25+ interactive games to help college students make real connections. Verified safe, designed for vibes.",
+  title: "Infriend - Gamify Your Connection | Dating App for College Students",
+  description: "Stop endless swiping. Infriend uses 25+ interactive games to help college students make real connections. Verified safe, designed for vibes.",
   manifest: "/manifest.json",
 };
 

@@ -92,7 +92,7 @@ export default function PrivacyPolicy() {
 
                     <h2 style={{ fontSize: '1.5rem', marginTop: '2.5rem', marginBottom: '1rem' }}>9. Contact Us</h2>
                     <p>For privacy-related questions or requests:</p>
-                    <p><strong>Email:</strong> <a href="mailto:hello@bondly.app" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>hello@bondly.app</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:hello@infriend.app" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>hello@infriend.app</a></p>
                 </div>
             </div>
             <Footer />

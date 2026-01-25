@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
             <div className={styles.container}>
                 <div className={styles.grid}>
                     <div className={styles.brandInfo}>
-                        <Link href="/" className={styles.logo}>Bondly</Link>
+                        <Link href="/" className={styles.logo}>Infriend</Link>
                         <p className={styles.description}>
                             The first game-first social connection app for college students. Stop swiping, start playing, and make real connections.
                         </p>
@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
                             <h4>About</h4>
                             <nav className={styles.links}>
                                 <Link href="#how-it-works">How It Works</Link>
-                                <Link href="#why-bondly">Why Bondly</Link>
+                                <Link href="#why-infriend">Why Infriend</Link>
                             </nav>
                         </div>
                         <div className={styles.column}>
@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
                         <div className={styles.column}>
                             <h4>Contact</h4>
                             <nav className={styles.links}>
-                                <Link href="mailto:hello@bondly.app">hello@bondly.app</Link>
+                                <Link href="mailto:hello@infriend.app">hello@infriend.app</Link>
                             </nav>
                         </div>
                     </div>
@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
 
                 <div className={styles.bottom}>
                     <p className={styles.copyright}>
-                        © {new Date().getFullYear()} Bondly Social Inc. All rights reserved.
+                        © {new Date().getFullYear()} Infriend Social Inc. All rights reserved.
                     </p>
                     <div className={styles.socials}>
                         <a href="https://www.instagram.com/joeaja.y/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">

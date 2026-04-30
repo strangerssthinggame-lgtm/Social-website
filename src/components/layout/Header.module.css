@@ -101,10 +101,17 @@
 
     /* Target button if class passed */
     .waitlistBtn {
-        min-height: 38px !important;
-        padding: 0.5rem 1.25rem !important;
-        font-size: 0.85rem !important;
-        height: auto !important;
+        min-height: 32px !important;
+        height: 32px !important;
+        padding: 0 0.85rem !important;
+        font-size: 0.75rem !important;
+        border-radius: 12px !important;
+        gap: 0.5rem !important;
+    }
+
+    /* Hide the button icon on mobile header to save space */
+    .waitlistBtn > div {
+        display: none !important;
     }
 }
 

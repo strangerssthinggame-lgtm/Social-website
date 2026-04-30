@@ -23,32 +23,32 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://infriend.app'),
+  metadataBase: new URL('https://ling.app'),
   title: {
-    default: "Infriend - Gamify Your Connection",
-    template: "%s | Infriend"
+    default: "Ling - Gamify Your Connection",
+    template: "%s | Ling"
   },
-  description: "Stop endless swiping. Infriend uses 25+ interactive games to help college students make real connections. Verified safe, designed for vibes.",
-  keywords: ["dating app", "college students", "social games", "infriend", "friends", "connection"],
-  authors: [{ name: "Infriend Team" }],
-  creator: "Infriend",
-  publisher: "Infriend",
+  description: "Stop endless swiping. Ling uses 25+ interactive games to help college students make real connections. Verified safe, designed for vibes.",
+  keywords: ["dating app", "college students", "social games", "ling", "friends", "connection"],
+  authors: [{ name: "Ling Team" }],
+  creator: "Ling",
+  publisher: "Ling",
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://infriend.app',
-    siteName: 'Infriend',
+    url: 'https://ling.app',
+    siteName: 'Ling',
     images: [{
       url: '/og-image.png', // We should ensure this exists or use a placeholder
       width: 1200,
       height: 630,
-      alt: 'Infriend App Preview',
+      alt: 'Ling App Preview',
     }],
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@infriendapp',
-    creator: '@infriendapp',
+    site: '@lingapp',
+    creator: '@lingapp',
   },
   manifest: "/manifest.json",
   icons: {

@@ -5,13 +5,13 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "Privacy Policy",
-    description: "Read our Privacy Policy to understand how Infriend collects, uses, and protects your data.",
+    description: "Read our Privacy Policy to understand how Ling collects, uses, and protects your data.",
     alternates: {
         canonical: '/privacy-policy',
     },
     openGraph: {
-        title: "Privacy Policy | Infriend",
-        url: 'https://infriend.app/privacy-policy',
+        title: "Privacy Policy | Ling",
+        url: 'https://ling.app/privacy-policy',
     }
 };
 
@@ -105,7 +105,7 @@ export default function PrivacyPolicy() {
 
                     <h2 style={{ fontSize: '1.5rem', marginTop: '2.5rem', marginBottom: '1rem' }}>9. Contact Us</h2>
                     <p>For privacy-related questions or requests:</p>
-                    <p><strong>Email:</strong> <a href="mailto:hello@infriend.app" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>hello@infriend.app</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:hello@ling.app" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>hello@ling.app</a></p>
                 </div>
             </div>
             <Footer />

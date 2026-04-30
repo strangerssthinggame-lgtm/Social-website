@@ -25,7 +25,7 @@ export const Safety: React.FC = () => {
                         <span className={styles.label}>Safety First</span>
                         <h2 className={styles.title}>Your <span className="highlight">Safety</span> is Our Top Priority</h2>
                         <p className={styles.description}>
-                            We&apos;ve built Infriend from the ground up to be the safest place for college students to meet. No bots, no bad actors, just real students.
+                            We&apos;ve built Ling from the ground up to be the safest place for college students to meet. No bots, no bad actors, just real students.
                         </p>
 
                         <div className={styles.safetyList}>

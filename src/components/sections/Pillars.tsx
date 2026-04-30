@@ -27,10 +27,10 @@ export const Pillars: React.FC = () => {
     ];
 
     return (
-        <section className={styles.section} id="why-infriend">
+        <section className={styles.section} id="why-ling">
             <div className={styles.container}>
                 <div className={styles.intro}>
-                    <h2 className={styles.sectionHeadline}>Why <span className="highlight">Infriend</span> is Different</h2>
+                    <h2 className={styles.sectionHeadline}>Why <span className="highlight">Ling</span> is Different</h2>
                     <p style={{ color: 'var(--text-secondary)' }}>More than just another dating app. A new way to meet.</p>
                 </div>
 

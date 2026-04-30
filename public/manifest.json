@@ -1,7 +1,7 @@
 {
-    "name": "Infriend - Gamify Your Connection",
-    "short_name": "Infriend",
-    "description": "Stop endless swiping. Infriend uses 25+ interactive games to help college students make real connections.",
+    "name": "Ling - Gamify Your Connection",
+    "short_name": "Ling",
+    "description": "Stop endless swiping. Ling uses 25+ interactive games to help college students make real connections.",
     "start_url": "/",
     "display": "standalone",
     "background_color": "#ffffff",

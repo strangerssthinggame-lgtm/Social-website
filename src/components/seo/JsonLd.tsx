@@ -4,9 +4,9 @@ const JsonLd = () => {
     const schema = {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "Infriend",
-        "url": "https://infriend.app",
-        "logo": "https://infriend.app/logo.png",
+        "name": "Ling",
+        "url": "https://ling.app",
+        "logo": "https://ling.app/logo.png",
         "sameAs": [
             "https://www.instagram.com/joeaja.y/",
             "https://x.com/joeajay2001"
@@ -14,7 +14,7 @@ const JsonLd = () => {
         "description": "The first game-first social connection app for college students.",
         "contactPoint": {
             "@type": "ContactPoint",
-            "email": "hello@infriend.app",
+            "email": "hello@ling.app",
             "contactType": "customer support"
         }
     };

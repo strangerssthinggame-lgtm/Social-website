@@ -97,7 +97,7 @@ export const AppPreview: React.FC = () => {
 
             <div className={styles.overlayGradient}>
                 <div className={styles.logoRow}>
-                    <span className={styles.appLogo}>INFRIEND</span>
+                    <span className={styles.appLogo}>LING</span>
                 </div>
 
                 <div className={styles.slidesContainer}>

@@ -101,9 +101,10 @@
 
     /* Target button if class passed */
     .waitlistBtn {
-        height: 38px !important;
-        padding: 0 1rem !important;
+        min-height: 38px !important;
+        padding: 0.5rem 1.25rem !important;
         font-size: 0.85rem !important;
+        height: auto !important;
     }
 }
 

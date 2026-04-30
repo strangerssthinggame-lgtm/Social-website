@@ -1,6 +1,19 @@
 import React from 'react';
 import { Footer } from "@/components/layout/Footer";
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Terms & Conditions",
+    description: "Read our Terms & Conditions for using Infriend.",
+    alternates: {
+        canonical: '/terms',
+    },
+    openGraph: {
+        title: "Terms & Conditions | Infriend",
+        url: 'https://infriend.app/terms',
+    }
+};
 
 export default function TermsOfService() {
     return (

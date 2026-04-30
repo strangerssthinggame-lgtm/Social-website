@@ -20,7 +20,7 @@ export const Header: React.FC = () => {
 
     const handleJoinWaitlist = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-        const heroSection = document.querySelector('.hero');
+        const heroSection = document.getElementById('hero');
         const emailInput = document.querySelector('input[type="email"]') as HTMLInputElement;
 
         if (heroSection) {

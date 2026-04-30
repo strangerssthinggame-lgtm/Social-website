@@ -42,6 +42,7 @@ export const FinalCTA: React.FC = () => {
                                 disabled={status === 'loading'}
                                 suppressHydrationWarning
                                 required
+                                aria-label="Email address"
                             />
                             <Button
                                 variant="white"

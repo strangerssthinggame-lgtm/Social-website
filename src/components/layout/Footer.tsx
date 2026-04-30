@@ -16,14 +16,14 @@ export const Footer: React.FC = () => {
 
                     <div className={styles.linksGrid}>
                         <div className={styles.column}>
-                            <h4>About</h4>
+                            <h3>About</h3>
                             <nav className={styles.links}>
                                 <Link href="#how-it-works">How It Works</Link>
                                 <Link href="#why-infriend">Why Infriend</Link>
                             </nav>
                         </div>
                         <div className={styles.column}>
-                            <h4>Community</h4>
+                            <h3>Community</h3>
                             <nav className={styles.links}>
                                 <Link href="#waitlist">Join Waitlist</Link>
                                 <Link href="https://www.instagram.com/joeaja.y/" target="_blank" rel="noopener noreferrer">Instagram</Link>
@@ -31,14 +31,14 @@ export const Footer: React.FC = () => {
                             </nav>
                         </div>
                         <div className={styles.column}>
-                            <h4>Legal</h4>
+                            <h3>Legal</h3>
                             <nav className={styles.links}>
                                 <Link href="/privacy-policy">Privacy Policy</Link>
                                 <Link href="/terms">Terms of Service</Link>
                             </nav>
                         </div>
                         <div className={styles.column}>
-                            <h4>Contact</h4>
+                            <h3>Contact</h3>
                             <nav className={styles.links}>
                                 <Link href="mailto:hello@infriend.app">hello@infriend.app</Link>
                             </nav>

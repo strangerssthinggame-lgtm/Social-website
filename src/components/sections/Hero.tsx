@@ -11,7 +11,7 @@ export const Hero: React.FC = () => {
     const { email, setEmail, status, joinWaitlist } = useWaitlist();
 
     return (
-        <section className={styles.hero}>
+        <section className={styles.hero} id="hero">
             <CardMarquee />
 
             <div className={`container ${styles.container}`}>
@@ -50,6 +50,7 @@ export const Hero: React.FC = () => {
                                     onChange={(e) => setEmail(e.target.value)}
                                     disabled={status === 'loading'}
                                     suppressHydrationWarning
+                                    aria-label="Email address"
                                 />
                                 <Button
                                     size="md"

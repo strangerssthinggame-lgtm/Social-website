@@ -8,6 +8,20 @@ import { Science } from "@/components/sections/Science";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 import { Footer } from "@/components/layout/Footer";
 import { WaitlistProvider } from "@/context/WaitlistContext";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Infriend - Gamify Your Connection | Dating App for College Students",
+  description: "Stop endless swiping. Infriend uses 25+ interactive games to help college students make real connections. Verified safe, designed for vibes.",
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: "Infriend - Gamify Your Connection",
+    description: "Stop endless swiping. Infriend uses 25+ interactive games to help college students make real connections.",
+    url: 'https://infriend.app',
+  }
+};
 
 export default function Home() {
   return (

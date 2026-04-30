@@ -1,6 +1,19 @@
 import React from 'react';
 import { Footer } from "@/components/layout/Footer";
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Privacy Policy",
+    description: "Read our Privacy Policy to understand how Infriend collects, uses, and protects your data.",
+    alternates: {
+        canonical: '/privacy-policy',
+    },
+    openGraph: {
+        title: "Privacy Policy | Infriend",
+        url: 'https://infriend.app/privacy-policy',
+    }
+};
 
 export default function PrivacyPolicy() {
     return (

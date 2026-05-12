@@ -3,6 +3,7 @@ import { Inter, Outfit } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { SWRegistration } from "@/components/layout/SWRegistration";
 import JsonLd from "@/components/seo/JsonLd";
+import { InstallPrompt } from "@/components/layout/InstallPrompt";
 import "./globals.css";
 
 const inter = Inter({
@@ -23,7 +24,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ling.app'),
+  metadataBase: new URL('https://lingapp.in'),
   title: {
     default: "Ling - Gamify Your Connection",
     template: "%s | Ling"
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://ling.app',
+    url: 'https://lingapp.in',
     siteName: 'Ling',
     images: [{
       url: '/og-image.png', // We should ensure this exists or use a placeholder
@@ -67,6 +68,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${outfit.variable} font-sans`}>
         <Header />
         <SWRegistration />
+        <InstallPrompt />
         <JsonLd />
         {children}
       </body>

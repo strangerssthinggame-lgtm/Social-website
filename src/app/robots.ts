@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/api/',
         },
-        sitemap: 'https://ling.app/sitemap.xml',
+        sitemap: 'https://lingapp.in/sitemap.xml',
     }
 }

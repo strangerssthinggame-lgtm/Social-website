@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
                         <div className={styles.column}>
                             <h3>Contact</h3>
                             <nav className={styles.links}>
-                                <Link href="mailto:hello@ling.app">hello@ling.app</Link>
+                                <Link href="mailto:hello@lingapp.in">hello@lingapp.in</Link>
                             </nav>
                         </div>
                     </div>

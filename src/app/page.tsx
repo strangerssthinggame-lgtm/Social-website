@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ling - Gamify Your Connection",
     description: "Stop endless swiping. Ling uses 25+ interactive games to help college students make real connections.",
-    url: 'https://ling.app',
+    url: 'https://lingapp.in',
   }
 };
 

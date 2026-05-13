@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: "Privacy Policy | Ling",
-        url: 'https://ling.app/privacy-policy',
+        url: 'https://lingapp.in/privacy-policy',
     }
 };
 
@@ -105,7 +105,7 @@ export default function PrivacyPolicy() {
 
                     <h2 style={{ fontSize: '1.5rem', marginTop: '2.5rem', marginBottom: '1rem' }}>9. Contact Us</h2>
                     <p>For privacy-related questions or requests:</p>
-                    <p><strong>Email:</strong> <a href="mailto:hello@ling.app" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>hello@ling.app</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:hello@lingapp.in" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>hello@lingapp.in</a></p>
                 </div>
             </div>
             <Footer />

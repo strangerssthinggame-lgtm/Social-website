@@ -5,8 +5,8 @@ const JsonLd = () => {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Ling",
-        "url": "https://ling.app",
-        "logo": "https://ling.app/logo.png",
+        "url": "https://lingapp.in",
+        "logo": "https://lingapp.in/logo.png",
         "sameAs": [
             "https://www.instagram.com/joeaja.y/",
             "https://x.com/joeajay2001"
@@ -14,7 +14,7 @@ const JsonLd = () => {
         "description": "The first game-first social connection app for college students.",
         "contactPoint": {
             "@type": "ContactPoint",
-            "email": "hello@ling.app",
+            "email": "hello@lingapp.in",
             "contactType": "customer support"
         }
     };

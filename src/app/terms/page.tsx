@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     },
     openGraph: {
         title: "Terms & Conditions | Ling",
-        url: 'https://ling.app/terms',
+        url: 'https://lingapp.in/terms',
     }
 };
 
@@ -97,7 +97,7 @@ export default function TermsOfService() {
 
                     <h2 style={{ fontSize: '1.5rem', marginTop: '2.5rem', marginBottom: '1rem' }}>11. Contact</h2>
                     <p>For questions about these Terms:</p>
-                    <p><strong>Email:</strong> <a href="mailto:hello@ling.app" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>hello@ling.app</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:hello@lingapp.in" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>hello@lingapp.in</a></p>
 
                     <p style={{ fontSize: '0.875rem', color: 'var(--text-tertiary)', marginTop: '3rem', fontStyle: 'italic' }}>
                         *This document is designed to meet general Google Play and Apple App Store policy expectations. It does not constitute legal advice.*

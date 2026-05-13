@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.ling.social",
+      "sha256_cert_fingerprints": [
+        "48:80:C8:B6:02:52:E2:D3:77:7A:C7:04:EB:55:A9:95:60:D7:2D:86:94:64:53:FD:4A:2C:42:CD:3D:D1:D4:9B"
+      ]
+    }
+  }
+]

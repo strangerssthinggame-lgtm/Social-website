@@ -6,6 +6,7 @@ import { Button } from '../ui/Button';
 import { CardMarquee } from '../ui/CardMarquee';
 import { AppPreview } from '../ui/AppPreview';
 import { useWaitlist } from '@/context/WaitlistContext';
+import { PlayStoreBadge } from '../ui/PlayStoreBadge';
 
 export const Hero: React.FC = () => {
     const { email, setEmail, status, joinWaitlist } = useWaitlist();
@@ -40,29 +41,35 @@ export const Hero: React.FC = () => {
                                 🎉 Thanks for joining! Keep an eye on your inbox.
                             </div>
                         ) : (
-                            <form className={styles.waitlistForm} onSubmit={joinWaitlist}>
-                                <input
-                                    type="email"
-                                    placeholder="Enter your email"
-                                    className={styles.emailInput}
-                                    required
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                    disabled={status === 'loading'}
-                                    suppressHydrationWarning
-                                    aria-label="Email address"
-                                />
-                                <Button
-                                    size="md"
-                                    type="submit"
-                                    variant="primary"
-                                    className={styles.submitButton}
-                                    disabled={status === 'loading'}
-                                    suppressHydrationWarning
-                                >
-                                    {status === 'loading' ? 'Joining...' : 'Join Waitlist'}
-                                </Button>
-                            </form>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                                <form className={styles.waitlistForm} onSubmit={joinWaitlist}>
+                                    <input
+                                        type="email"
+                                        placeholder="Enter your email"
+                                        className={styles.emailInput}
+                                        required
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
+                                        disabled={status === 'loading'}
+                                        suppressHydrationWarning
+                                        aria-label="Email address"
+                                    />
+                                    <Button
+                                        size="md"
+                                        type="submit"
+                                        variant="primary"
+                                        className={styles.submitButton}
+                                        disabled={status === 'loading'}
+                                        suppressHydrationWarning
+                                    >
+                                        {status === 'loading' ? 'Joining...' : 'Join Waitlist'}
+                                    </Button>
+                                </form>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                                    <span style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', fontWeight: 600 }}>OR</span>
+                                    <PlayStoreBadge />
+                                </div>
+                            </div>
                         )}
                         {status === 'error' && (
                             <p style={{ color: '#ef4444', fontSize: '0.9rem', marginTop: '0.5rem' }}>

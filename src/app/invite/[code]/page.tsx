@@ -3,16 +3,16 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { PlayStoreBadge } from '@/components/ui/PlayStoreBadge';
 import { Button } from '@/components/ui/Button';
+import styles from './InvitePage.module.css';
 
 export const metadata: Metadata = {
     title: "You're Invited to Ling!",
     description: "Accept your invite and join the first game-first social connection app for college students.",
 };
 
-export default function InviteLandingPage({ params }: { params: { code: string } }) {
-    const { code } = params;
+export default async function InviteLandingPage({ params }: { params: Promise<{ code: string }> }) {
+    const { code } = await params;
     const deepLink = `ling://invite/${code}`;
-    const playStoreLink = "https://play.google.com/store/apps/details?id=com.ling.social";
 
     return (
         <main style={{
@@ -37,11 +37,7 @@ export default function InviteLandingPage({ params }: { params: { code: string }
             }} />
 
             <div style={{ position: 'relative', zIndex: 1, maxWidth: '500px' }}>
-                <div style={{
-                    fontSize: '4rem',
-                    marginBottom: '1.5rem',
-                    animation: 'bounce 2s infinite'
-                }}>
+                <div className={styles.emoji}>
                     👋
                 </div>
                 
@@ -100,13 +96,6 @@ export default function InviteLandingPage({ params }: { params: { code: string }
                     Learn more about Ling
                 </Link>
             </div>
-
-            <style jsx global>{`
-                @keyframes bounce {
-                    0%, 100% { transform: translateY(0); }
-                    50% { transform: translateY(-10px); }
-                }
-            `}</style>
         </main>
     );
 }

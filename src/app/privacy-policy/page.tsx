@@ -100,10 +100,19 @@ export default function PrivacyPolicy() {
                     <h2 style={{ fontSize: '1.5rem', marginTop: '2.5rem', marginBottom: '1rem' }}>7. Children’s Privacy</h2>
                     <p>The Service is <strong>not intended for users under 13 years of age</strong>. We do not knowingly collect data from children. If such data is discovered, it will be deleted immediately.</p>
 
-                    <h2 style={{ fontSize: '1.5rem', marginTop: '2.5rem', marginBottom: '1rem' }}>8. Changes to This Policy</h2>
+                    <h2 style={{ fontSize: '1.5rem', marginTop: '2.5rem', marginBottom: '1rem' }}>9. Child Safety & Protection Standards</h2>
+                    <p>Ling has a strict, zero-tolerance policy towards any content or behavior related to Child Sexual Exploitation and Abuse (CSAE) or Child Sexual Abuse Material (CSAM). We are committed to maintaining a safe, secure, and respectful environment for our community.</p>
+                    <p>If you encounter any content, profiles, or messages that violate our safety standards, please report them immediately:</p>
+                    <ul style={{ listStyleType: 'disc', paddingLeft: '1.5rem', marginBottom: '1rem' }}>
+                        <li><strong>In-App Reporting:</strong> Tap on the "Report" button on the user's profile or chat settings.</li>
+                        <li><strong>Email Reporting:</strong> Send an email detailing the concern to our dedicated safety team at: <strong>support@lingapp.in</strong></li>
+                    </ul>
+                    <p>Upon receiving a report, our team will investigate immediately. Any user found violating these guidelines will face permanent account termination, device bans, and we will report the incident to the National Center for Missing & Exploited Children (NCMEC) and local law enforcement as required by law.</p>
+
+                    <h2 style={{ fontSize: '1.5rem', marginTop: '2.5rem', marginBottom: '1rem' }}>10. Changes to This Policy</h2>
                     <p>We may update this Privacy Policy from time to time. Significant changes will be communicated through the Service.</p>
 
-                    <h2 style={{ fontSize: '1.5rem', marginTop: '2.5rem', marginBottom: '1rem' }}>9. Contact Us</h2>
+                    <h2 style={{ fontSize: '1.5rem', marginTop: '2.5rem', marginBottom: '1rem' }}>11. Contact Us</h2>
                     <p>For privacy-related questions or requests:</p>
                     <p><strong>Email:</strong> <a href="mailto:hello@lingapp.in" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>hello@lingapp.in</a></p>
                 </div>

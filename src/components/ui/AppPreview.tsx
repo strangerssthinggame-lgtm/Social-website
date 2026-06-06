@@ -29,22 +29,22 @@ const slides = [
         id: 0,
         icon: <Gamepad2 size={32} />,
         iconBg: "black",
-        title: <>STOP THE<br />SMALL<br /><span style={{ color: 'var(--color-primary)' }}>TALK.</span></>,
-        description: "Stop the small talk. See their vibe through games, not generic \"hey\" messages."
+        title: <>BEYOND<br />AWKWARD<br /><span style={{ color: 'var(--color-primary)' }}>SMALL TALK.</span></>,
+        description: "Skip the boring 'hey' messages. Play interactive mini-games like Two Truths & Would-U to break the ice instantly."
     },
     {
         id: 1,
-        icon: <MapPin size={32} />,
-        iconBg: "white",
-        title: <>CHEMISTRY<br />UNLOCKS<br /><span style={{ color: 'var(--color-primary)' }}>CHAT.</span></>,
-        description: "Chemistry unlocks chat. Play. Connect. Talk—only when it feels right."
+        icon: <Sparkles size={32} />,
+        iconBg: 'var(--color-primary)',
+        title: <>FIND YOUR<br />REAL<br /><span style={{ color: 'var(--color-primary)' }}>VIBE.</span></>,
+        description: "Take vibe checks and match profiles based on interests, lifestyle, and shared compatibilities. Find who aligns with you."
     },
     {
         id: 2,
-        icon: <Sparkles size={32} />,
-        iconBg: 'var(--color-primary)',
-        title: <>REAL<br />STUDENTS.<br /><span style={{ color: 'var(--color-primary)' }}>REAL VIBES.</span></>,
-        description: "Real students. Real vibes. Campus verified. Zero catfish. All genuine."
+        icon: <Flame size={32} />,
+        iconBg: "black",
+        title: <>STREAKS,<br />TIMELINES &<br /><span style={{ color: 'var(--color-primary)' }}>COLLABS.</span></>,
+        description: "Define your connection with relationship tags, build shared collab profiles, share memories on your timeline, and maintain daily streaks."
     }
 ];
 

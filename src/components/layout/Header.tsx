@@ -18,19 +18,12 @@ export const Header: React.FC = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const handleJoinWaitlist = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const handleJoinClick = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-        const heroSection = document.getElementById('hero');
-        const emailInput = document.querySelector('input[type="email"]') as HTMLInputElement;
+        const waitlistSection = document.getElementById('waitlist');
 
-        if (heroSection) {
-            heroSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            // Focus the email input after scrolling
-            setTimeout(() => {
-                if (emailInput) {
-                    emailInput.focus();
-                }
-            }, 800);
+        if (waitlistSection) {
+            waitlistSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
     };
 
@@ -60,8 +53,8 @@ export const Header: React.FC = () => {
                 </nav>
 
                 <div className={styles.ctaContainer}>
-                    <Button size="sm" onClick={handleJoinWaitlist} variant={isScrolled ? "primary" : "primary"} className={styles.waitlistBtn}>
-                        Join Waitlist
+                    <Button size="sm" onClick={handleJoinClick} variant={isScrolled ? "primary" : "primary"} className={styles.waitlistBtn}>
+                        Join Now
                     </Button>
                     <button
                         className={styles.mobileMenuBtn}

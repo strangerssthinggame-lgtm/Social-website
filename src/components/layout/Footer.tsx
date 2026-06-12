@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
                         <div className={styles.column}>
                             <h3>Community</h3>
                             <nav className={styles.links}>
-                                <Link href="#waitlist">Join Waitlist</Link>
+                                <Link href="#waitlist">Join Now</Link>
                                 <Link href="https://www.instagram.com/joeaja.y/" target="_blank" rel="noopener noreferrer">Instagram</Link>
                                 <Link href="https://x.com/joeajay2001" target="_blank" rel="noopener noreferrer">Twitter/X</Link>
                             </nav>

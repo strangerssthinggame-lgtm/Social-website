@@ -17,6 +17,8 @@ export function InstallPrompt() {
         const dismissed = sessionStorage.getItem("ling-install-dismissed");
         if (dismissed) return;
 
+        const isAndroid = typeof navigator !== 'undefined' && /android/i.test(navigator.userAgent);
+
         const handler = (e: Event) => {
             e.preventDefault();
             setPromptEvent(e as BeforeInstallPromptEvent);
@@ -26,22 +28,29 @@ export function InstallPrompt() {
 
         window.addEventListener("beforeinstallprompt", handler);
 
+        // Fallback: If on Android, show the prompt after 5 seconds even if beforeinstallprompt doesn't fire
+        let fallbackTimer: NodeJS.Timeout;
+        if (isAndroid) {
+            fallbackTimer = setTimeout(() => {
+                setVisible(true);
+            }, 5000);
+        }
+
         // Listen for successful install
         window.addEventListener("appinstalled", () => {
             setInstalled(true);
             setVisible(false);
         });
 
-        return () => window.removeEventListener("beforeinstallprompt", handler);
+        return () => {
+            window.removeEventListener("beforeinstallprompt", handler);
+            if (fallbackTimer) clearTimeout(fallbackTimer);
+        };
     }, []);
 
-    const handleInstall = async () => {
-        if (!promptEvent) return;
-        await promptEvent.prompt();
-        const { outcome } = await promptEvent.userChoice;
-        if (outcome === "accepted") {
-            setInstalled(true);
-        }
+    const handleInstall = () => {
+        window.open('https://play.google.com/store/apps/details?id=com.ling.social', '_blank', 'noopener,noreferrer');
+        sessionStorage.setItem("ling-install-dismissed", "true");
         setVisible(false);
     };
 

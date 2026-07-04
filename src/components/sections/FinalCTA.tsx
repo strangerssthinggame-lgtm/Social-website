@@ -15,7 +15,7 @@ export const FinalCTA: React.FC = () => {
             <div className={styles.container}>
                 <h2 className={styles.title}>Ready to Break the Ice?</h2>
                 <p className={styles.description}>
-                    Download Ling today to stop swiping and start connecting through fun, interactive games.
+                    Download Flame today to stop swiping and start connecting through fun, interactive games.
                 </p>
 
                 <div className={styles.waitlistForm}>

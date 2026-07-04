@@ -10,15 +10,15 @@ import { Footer } from "@/components/layout/Footer";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ling - Gamify Your Connection | Dating App for College Students",
-  description: "Stop endless swiping. Ling uses 25+ interactive games to help college students make real connections. Verified safe, designed for vibes.",
+  title: "Flame - Gamify Your Connection | Dating App for College Students",
+  description: "Stop endless swiping. Flame uses 25+ interactive games to help college students make real connections. Verified safe, designed for vibes.",
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "Ling - Gamify Your Connection",
-    description: "Stop endless swiping. Ling uses 25+ interactive games to help college students make real connections.",
-    url: 'https://lingapp.in',
+    title: "Flame - Gamify Your Connection",
+    description: "Stop endless swiping. Flame uses 25+ interactive games to help college students make real connections.",
+    url: 'https://Flameapp.in',
   }
 };
 

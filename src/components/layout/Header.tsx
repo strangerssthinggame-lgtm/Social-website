@@ -41,8 +41,9 @@ export const Header: React.FC = () => {
     return (
         <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
             <div className={`container ${styles.container}`}>
-                <Link href="/" className={styles.logo} onClick={closeMenu}>
-                    Ling
+                <Link href="/" className={styles.logo} onClick={closeMenu} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <img src="/logo.png" alt="Flame Logo" style={{ height: '48px' }} />
+                    <span style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>Flame</span>
                 </Link>
 
                 {/* Desktop Nav */}

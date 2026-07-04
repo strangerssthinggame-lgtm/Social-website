@@ -5,13 +5,13 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: "Terms & Conditions",
-    description: "Read our Terms & Conditions for using Ling.",
+    description: "Read our Terms & Conditions for using Flame.",
     alternates: {
         canonical: '/terms',
     },
     openGraph: {
-        title: "Terms & Conditions | Ling",
-        url: 'https://lingapp.in/terms',
+        title: "Terms & Conditions | Flame",
+        url: 'https://Flameapp.in/terms',
     }
 };
 
@@ -97,7 +97,7 @@ export default function TermsOfService() {
 
                     <h2 style={{ fontSize: '1.5rem', marginTop: '2.5rem', marginBottom: '1rem' }}>11. Contact</h2>
                     <p>For questions about these Terms:</p>
-                    <p><strong>Email:</strong> <a href="mailto:hello@lingapp.in" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>hello@lingapp.in</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:hello@Flameapp.in" style={{ color: 'var(--color-primary)', textDecoration: 'underline' }}>hello@Flameapp.in</a></p>
 
                     <p style={{ fontSize: '0.875rem', color: 'var(--text-tertiary)', marginTop: '3rem', fontStyle: 'italic' }}>
                         *This document is designed to meet general Google Play and Apple App Store policy expectations. It does not constitute legal advice.*

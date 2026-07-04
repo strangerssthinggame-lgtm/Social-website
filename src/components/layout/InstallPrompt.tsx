@@ -14,7 +14,7 @@ export function InstallPrompt() {
 
     useEffect(() => {
         // Don't show if already dismissed recently
-        const dismissed = sessionStorage.getItem("ling-install-dismissed");
+        const dismissed = sessionStorage.getItem("Flame-install-dismissed");
         if (dismissed) return;
 
         const isAndroid = typeof navigator !== 'undefined' && /android/i.test(navigator.userAgent);
@@ -49,13 +49,13 @@ export function InstallPrompt() {
     }, []);
 
     const handleInstall = () => {
-        window.open('https://play.google.com/store/apps/details?id=com.ling.social', '_blank', 'noopener,noreferrer');
-        sessionStorage.setItem("ling-install-dismissed", "true");
+        window.open('https://play.google.com/store/apps/details?id=com.Flame.social', '_blank', 'noopener,noreferrer');
+        sessionStorage.setItem("Flame-install-dismissed", "true");
         setVisible(false);
     };
 
     const handleDismiss = () => {
-        sessionStorage.setItem("ling-install-dismissed", "true");
+        sessionStorage.setItem("Flame-install-dismissed", "true");
         setVisible(false);
     };
 
@@ -80,7 +80,7 @@ export function InstallPrompt() {
             {/* Banner */}
             <div
                 role="dialog"
-                aria-label="Install Ling App"
+                aria-label="Install Flame App"
                 style={{
                     position: "fixed",
                     bottom: "1.25rem",
@@ -103,14 +103,12 @@ export function InstallPrompt() {
                     width: "52px",
                     height: "52px",
                     borderRadius: "14px",
-                    background: "#FACC15",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontSize: "1.6rem",
                     flexShrink: 0,
                 }}>
-                    ⚡
+                    <img src="/logo.png" alt="Flame Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                 </div>
 
                 {/* Text */}
@@ -125,7 +123,7 @@ export function InstallPrompt() {
                         textTransform: "none",
                         letterSpacing: "normal",
                     }}>
-                        Install Ling
+                        Install Flame
                     </p>
                     <p style={{
                         margin: "0.2rem 0 0",

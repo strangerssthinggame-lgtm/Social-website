@@ -4,15 +4,15 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Child Safety & Protection Standards | Ling",
+    title: "Child Safety & Protection Standards | Flame",
     description: "Read our Child Safety and Protection Standards. We maintain a zero-tolerance policy towards CSAE and CSAM.",
     alternates: {
         canonical: '/safety',
     },
     openGraph: {
-        title: "Child Safety & Protection Standards | Ling",
-        description: "Ling's commitment to safety: zero-tolerance policy for Child Sexual Exploitation and Abuse (CSAE) and Child Sexual Abuse Material (CSAM).",
-        url: 'https://lingapp.in/safety',
+        title: "Child Safety & Protection Standards | Flame",
+        description: "Flame's commitment to safety: zero-tolerance policy for Child Sexual Exploitation and Abuse (CSAE) and Child Sexual Abuse Material (CSAM).",
+        url: 'https://Flameapp.in/safety',
     }
 };
 
@@ -99,7 +99,7 @@ export default function SafetyPage() {
                         lineHeight: 1.7, 
                         fontWeight: 500 
                     }}>
-                        Ling has a strict, zero-tolerance policy towards any content or behavior related to Child Sexual Exploitation and Abuse (CSAE) or Child Sexual Abuse Material (CSAM). We are committed to maintaining a safe, secure, and respectful environment for our community.
+                        Flame has a strict, zero-tolerance policy towards any content or behavior related to Child Sexual Exploitation and Abuse (CSAE) or Child Sexual Abuse Material (CSAM). We are committed to maintaining a safe, secure, and respectful environment for our community.
                     </p>
                 </div>
 
@@ -157,8 +157,8 @@ export default function SafetyPage() {
                                     </h3>
                                     <p style={{ margin: 0, color: 'var(--text-secondary)', fontSize: '0.95rem' }}>
                                         Send an email detailing the concern to our dedicated safety team at:{' '}
-                                        <a href="mailto:support@lingapp.in" style={{ color: 'var(--color-secondary)', fontWeight: 700, textDecoration: 'underline' }}>
-                                            support@lingapp.in
+                                        <a href="mailto:support@Flameapp.in" style={{ color: 'var(--color-secondary)', fontWeight: 700, textDecoration: 'underline' }}>
+                                            support@Flameapp.in
                                         </a>
                                     </p>
                                 </div>

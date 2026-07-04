@@ -6,13 +6,13 @@ import { Button } from '@/components/ui/Button';
 import styles from './InvitePage.module.css';
 
 export const metadata: Metadata = {
-    title: "You're Invited to Ling!",
+    title: "You're Invited to Flame!",
     description: "Accept your invite and join the first game-first social connection app for college students.",
 };
 
 export default async function InviteLandingPage({ params }: { params: Promise<{ code: string }> }) {
     const { code } = await params;
-    const deepLink = `ling://invite/${code}`;
+    const deepLink = `flame://invite/${code}`;
 
     return (
         <main style={{
@@ -56,7 +56,7 @@ export default async function InviteLandingPage({ params }: { params: Promise<{ 
                     marginBottom: '2.5rem',
                     lineHeight: 1.6
                 }}>
-                    A friend wants to connect with you on <strong style={{ color: '#FACC15' }}>Ling</strong>.<br /> 
+                    A friend wants to connect with you on <strong style={{ color: '#FACC15' }}>Flame</strong>.<br /> 
                     Accept your invite to start playing and connecting.
                 </p>
 
@@ -68,7 +68,7 @@ export default async function InviteLandingPage({ params }: { params: Promise<{ 
                 }}>
                     <a href={deepLink}>
                         <Button variant="primary" size="lg" style={{ width: '100%', height: '64px', fontSize: '1.25rem' }}>
-                            Open in Ling App 🚀
+                            Open in Flame App 🚀
                         </Button>
                     </a>
 
@@ -93,7 +93,7 @@ export default async function InviteLandingPage({ params }: { params: Promise<{ 
                     fontSize: '0.875rem',
                     textDecoration: 'none'
                 }}>
-                    Learn more about Ling
+                    Learn more about Flame
                 </Link>
             </div>
         </main>

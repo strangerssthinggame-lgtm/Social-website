@@ -4,21 +4,21 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: "Delete My Account | Ling",
-    description: "Request deletion of your Ling account and associated data. Learn what data is removed, what may be retained, and how to submit a deletion request.",
+    title: "Delete My Account | Flame",
+    description: "Request deletion of your Flame account and associated data. Learn what data is removed, what may be retained, and how to submit a deletion request.",
     alternates: {
         canonical: '/delete-account',
     },
     openGraph: {
-        title: "Delete My Account | Ling",
-        description: "Request deletion of your Ling account and all associated data.",
-        url: 'https://lingapp.in/delete-account',
+        title: "Delete My Account | Flame",
+        description: "Request deletion of your Flame account and all associated data.",
+        url: 'https://Flameapp.in/delete-account',
     }
 };
 
-const CONTACT_EMAIL = 'hello@lingapp.com';
+const CONTACT_EMAIL = 'hello@Flameapp.com';
 const EMAIL_SUBJECT = 'Account%20Deletion%20Request';
-const EMAIL_BODY = `Hi%20Ling%20Team%2C%0A%0AI%20would%20like%20to%20request%20the%20permanent%20deletion%20of%20my%20Ling%20account%20and%20all%20associated%20data.%0A%0ADisplay%20Name%20%2F%20Username%3A%20%0ARegistered%20Email%20%2F%20Phone%3A%20%0A%0APlease%20confirm%20once%20my%20account%20has%20been%20deleted.%0A%0AThank%20you`;
+const EMAIL_BODY = `Hi%20Flame%20Team%2C%0A%0AI%20would%20like%20to%20request%20the%20permanent%20deletion%20of%20my%20Flame%20account%20and%20all%20associated%20data.%0A%0ADisplay%20Name%20%2F%20Username%3A%20%0ARegistered%20Email%20%2F%20Phone%3A%20%0A%0APlease%20confirm%20once%20my%20account%20has%20been%20deleted.%0A%0AThank%20you`;
 
 export default function DeleteAccount() {
     return (
@@ -68,10 +68,10 @@ export default function DeleteAccount() {
                         marginBottom: '1rem',
                         color: 'var(--text-primary)',
                     }}>
-                        Delete Your <span style={{ color: 'var(--color-secondary)' }}>Ling</span> Account
+                        Delete Your <span style={{ color: 'var(--color-secondary)' }}>Flame</span> Account
                     </h1>
                     <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', lineHeight: 1.6, maxWidth: '620px', fontWeight: 400, fontStyle: 'normal', textTransform: 'none' }}>
-                        We respect your right to privacy and data ownership. If you wish to permanently delete your Ling account and associated data, follow the steps below.
+                        We respect your right to privacy and data ownership. If you wish to permanently delete your Flame account and associated data, follow the steps below.
                     </p>
                     <p style={{ color: 'var(--text-tertiary)', fontSize: '0.85rem', marginTop: '0.75rem', fontWeight: 400, fontStyle: 'normal', textTransform: 'none' }}>
                         Last updated: May 12, 2026
@@ -101,10 +101,10 @@ export default function DeleteAccount() {
                     <section style={{ marginBottom: '3rem' }}>
                         <StepHeader number={1} title="Delete Directly in the App" />
                         <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem', fontWeight: 400, fontStyle: 'normal', textTransform: 'none' }}>
-                            The fastest way to delete your account is from within the Ling app:
+                            The fastest way to delete your account is from within the Flame app:
                         </p>
                         <ol style={{ paddingLeft: '1.5rem', color: 'var(--text-secondary)', display: 'flex', flexDirection: 'column', gap: '0.6rem', fontWeight: 400, fontStyle: 'normal', textTransform: 'none' }}>
-                            <li>Open the <strong style={{ color: 'var(--text-primary)' }}>Ling</strong> app on your device</li>
+                            <li>Open the <strong style={{ color: 'var(--text-primary)' }}>Flame</strong> app on your device</li>
                             <li>Go to <strong style={{ color: 'var(--text-primary)' }}>Profile → Settings</strong></li>
                             <li>Scroll to the bottom and tap <strong style={{ color: 'var(--color-secondary)' }}>&ldquo;Delete Account&rdquo;</strong></li>
                             <li>Confirm your choice when prompted</li>
@@ -123,7 +123,7 @@ export default function DeleteAccount() {
                             If you no longer have access to the app, email us with the following details:
                         </p>
                         <ul style={{ paddingLeft: '1.5rem', color: 'var(--text-secondary)', display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '1.5rem', fontWeight: 400, fontStyle: 'normal', textTransform: 'none' }}>
-                            <li>Your <strong style={{ color: 'var(--text-primary)' }}>display name or username</strong> on Ling</li>
+                            <li>Your <strong style={{ color: 'var(--text-primary)' }}>display name or username</strong> on Flame</li>
                             <li>The <strong style={{ color: 'var(--text-primary)' }}>email address or phone number</strong> used to register</li>
                             <li>A brief statement that you wish to <strong style={{ color: 'var(--text-primary)' }}>permanently delete your account and all associated data</strong></li>
                         </ul>

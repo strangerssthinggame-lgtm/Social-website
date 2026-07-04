@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
 
 export async function GET() {
-    return NextResponse.redirect('https://play.google.com/store/apps/details?id=com.ling.social');
+    return NextResponse.redirect('https://play.google.com/store/apps/details?id=com.Flame.social');
 }

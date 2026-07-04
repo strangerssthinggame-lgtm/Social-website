@@ -24,37 +24,37 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://lingapp.in'),
+  metadataBase: new URL('https://Flameapp.in'),
   title: {
-    default: "Ling - Gamify Your Connection",
-    template: "%s | Ling"
+    default: "Flame - Gamify Your Connection",
+    template: "%s | Flame"
   },
-  description: "Stop endless swiping. Ling uses 25+ interactive games to help college students make real connections. Verified safe, designed for vibes.",
-  keywords: ["dating app", "college students", "social games", "ling", "friends", "connection"],
-  authors: [{ name: "Ling Team" }],
-  creator: "Ling",
-  publisher: "Ling",
+  description: "Stop endless swiping. Flame uses 25+ interactive games to help college students make real connections. Verified safe, designed for vibes.",
+  keywords: ["dating app", "college students", "social games", "Flame", "friends", "connection"],
+  authors: [{ name: "Flame Team" }],
+  creator: "Flame",
+  publisher: "Flame",
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://lingapp.in',
-    siteName: 'Ling',
+    url: 'https://Flameapp.in',
+    siteName: 'Flame',
     images: [{
       url: '/og-image.png', // We should ensure this exists or use a placeholder
       width: 1200,
       height: 630,
-      alt: 'Ling App Preview',
+      alt: 'Flame App Preview',
     }],
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@lingapp',
-    creator: '@lingapp',
+    site: '@Flameapp',
+    creator: '@Flameapp',
   },
   manifest: "/manifest.json",
   icons: {
-    icon: '/favicon.ico',
-    apple: '/icon-192x192.png',
+    icon: '/logo.png',
+    apple: '/icons/icon-192x192.png',
   },
 };
 

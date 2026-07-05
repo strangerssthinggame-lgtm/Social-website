@@ -4,7 +4,7 @@ import Image from 'next/image';
 export const PlayStoreBadge: React.FC<{ className?: string }> = ({ className }) => {
     return (
         <a 
-            href="https://play.google.com/store/apps/details?id=com.ling.social" 
+            href="https://play.google.com/store/apps/details?id=com.ling.social&pcampaignid=web_share" 
             target="_blank" 
             rel="noopener noreferrer"
             className={className}

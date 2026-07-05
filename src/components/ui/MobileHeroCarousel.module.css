@@ -1,0 +1,198 @@
+.mobileCarouselWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    overflow: hidden;
+    position: relative;
+    padding-top: 2rem;
+    margin-left: -50vw;
+    left: 50%;
+}
+
+.carouselContainer {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    height: 58vh;
+    padding-bottom: 1rem;
+}
+
+.carouselContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    min-width: 100vw;
+    scroll-snap-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 0 4vw; /* Equivalent to gap and margin from RN */
+}
+
+.imageWrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    /* Optional: subtle shadow for card effect */
+    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+}
+
+.bottomContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 24px 24px;
+    z-index: 10;
+}
+
+.textBlockContainer {
+    position: relative;
+    height: 220px;
+    margin-bottom: 12px;
+}
+
+.textBlock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transform: translateY(20px) translateX(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+}
+
+.textBlock.active {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+    pointer-events: auto;
+}
+
+.tagPill {
+    display: inline-flex;
+    background-color: rgba(250, 204, 21, 0.12);
+    border: 1px solid rgba(250, 204, 21, 0.3);
+    padding: 5px 12px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+.tagText {
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 900;
+    font-size: 10px;
+    color: var(--color-primary);
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.title {
+    font-family: var(--font-outfit), sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 30px;
+    line-height: 1.1;
+    color: #ffffff;
+    letter-spacing: -1px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+.titleHighlight {
+    color: var(--color-primary);
+}
+
+.description {
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 500;
+    font-size: 13.5px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.6);
+    max-width: 320px;
+    margin: 0;
+}
+
+.paginationRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 20px;
+    height: 16px;
+}
+
+.dotTouch {
+    background: none;
+    border: none;
+    padding: 6px 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.dot {
+    height: 6px;
+    width: 6px;
+    border-radius: 100px;
+    background-color: #ffffff;
+    opacity: 0.35;
+    transition: all 0.3s ease;
+}
+
+.dotActive .dot {
+    width: 20px;
+    opacity: 1;
+}
+
+.buttonRow {
+    height: 56px;
+    margin-bottom: 4px;
+}
+
+.mainBtn {
+    width: 100%;
+    height: 56px;
+    border-radius: 16px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.mainBtnGradient {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 100%;
+    background: linear-gradient(135deg, #FACC15 0%, #F59E0B 100%);
+}
+
+.mainBtnText {
+    font-family: var(--font-inter), sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.mainBtnIcon {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

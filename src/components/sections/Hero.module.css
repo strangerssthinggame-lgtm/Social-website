@@ -213,11 +213,29 @@
     color: var(--text-tertiary);
 }
 
+.desktopHeroContent {
+    display: block;
+    width: 100%;
+}
+
+.mobileHeroContent {
+    display: none;
+    width: 100%;
+}
+
 @media (max-width: 768px) {
     .hero {
-        padding-top: calc(var(--header-height) + 3rem);
-        padding-bottom: 4rem;
+        padding-top: 0;
+        padding-bottom: 0;
         min-height: auto;
+    }
+
+    .desktopHeroContent {
+        display: none;
+    }
+
+    .mobileHeroContent {
+        display: block;
     }
 
     .container {

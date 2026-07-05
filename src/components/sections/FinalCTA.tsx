@@ -7,7 +7,7 @@ import { PlayStoreBadge } from '../ui/PlayStoreBadge';
 
 export const FinalCTA: React.FC = () => {
     const handleJoinClick = () => {
-        window.open('https://play.google.com/store/apps/details?id=com.ling.social', '_blank', 'noopener,noreferrer');
+        window.open('https://play.google.com/store/apps/details?id=com.ling.social&pcampaignid=web_share', '_blank', 'noopener,noreferrer');
     };
 
     return (

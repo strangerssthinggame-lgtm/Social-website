@@ -1,14 +1,13 @@
 .mobileCarouselWrapper {
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: #000;
     overflow: hidden;
     position: relative;
-    padding-top: 2rem;
-    margin-left: -50vw;
-    left: 50%;
+    padding-top: 16px;
+    border-radius: 40px;
 }
 
 .carouselContainer {
@@ -18,8 +17,12 @@
     scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    height: 58vh;
+    flex: 1;
+    min-height: 0;
     padding-bottom: 1rem;
+    gap: 8px;
+    padding: 0 4px;
+    scroll-padding: 0 4px;
 }
 
 .carouselContainer::-webkit-scrollbar {
@@ -27,11 +30,10 @@
 }
 
 .card {
-    min-width: 100vw;
+    flex: 0 0 96%;
+    height: 100%;
     scroll-snap-align: center;
-    display: flex;
-    justify-content: center;
-    padding: 0 4vw; /* Equivalent to gap and margin from RN */
+    position: relative;
 }
 
 .imageWrapper {
@@ -40,12 +42,10 @@
     position: relative;
     border-radius: 20px;
     overflow: hidden;
-    /* Optional: subtle shadow for card effect */
-    box-shadow: 0 8px 30px rgba(0,0,0,0.5);
 }
 
 .bottomContent {
-    flex: 1;
+    flex: 0 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -55,8 +55,11 @@
 
 .textBlockContainer {
     position: relative;
-    height: 220px;
+    height: 240px;
     margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .textBlock {
@@ -65,7 +68,7 @@
     left: 0;
     right: 0;
     opacity: 0;
-    transform: translateY(20px) translateX(20px);
+    transform: translateY(20px) translateX(60px);
     transition: opacity 0.4s ease, transform 0.4s ease;
     pointer-events: none;
 }
@@ -98,10 +101,10 @@
     font-family: var(--font-outfit), sans-serif;
     font-weight: 900;
     font-style: italic;
-    font-size: 30px;
-    line-height: 1.1;
+    font-size: 34px;
+    line-height: 34px;
     color: #ffffff;
-    letter-spacing: -1px;
+    letter-spacing: -1.5px;
     margin-bottom: 8px;
     text-transform: uppercase;
     margin-top: 0;
@@ -115,7 +118,7 @@
     font-family: var(--font-inter), sans-serif;
     font-weight: 500;
     font-size: 13.5px;
-    line-height: 1.4;
+    line-height: 19px;
     color: rgba(255, 255, 255, 0.6);
     max-width: 320px;
     margin: 0;

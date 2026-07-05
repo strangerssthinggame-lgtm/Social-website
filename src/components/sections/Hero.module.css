@@ -114,6 +114,20 @@
     margin-top: 1rem;
 }
 
+.ctaButtons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ctaDisclaimer {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
 .visual {
     display: flex;
     justify-content: center;
@@ -225,17 +239,9 @@
 
 @media (max-width: 768px) {
     .hero {
-        padding-top: 0;
-        padding-bottom: 0;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
         min-height: auto;
-    }
-
-    .desktopHeroContent {
-        display: none;
-    }
-
-    .mobileHeroContent {
-        display: block;
     }
 
     .container {
@@ -252,12 +258,17 @@
         width: 100%;
     }
 
+    .ctaButtons {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .waitlistForm {
         flex-direction: column;
         max-width: 100%;
         width: 100%;
         align-items: stretch;
-        /* Explicitly force stretch */
     }
 
     .emailInput {
@@ -267,7 +278,6 @@
         flex: none;
     }
 
-    /* Override the desktop !important height */
     .submitButton {
         height: 56px !important;
         min-height: 56px;
@@ -282,7 +292,9 @@
 
 @media (max-width: 480px) {
     .visual {
-        display: none;
+        display: flex;
+        transform: scale(0.85);
+        margin-top: -20px;
     }
 
     .tagline {

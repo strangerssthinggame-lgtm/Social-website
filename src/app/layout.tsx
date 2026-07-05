@@ -52,10 +52,6 @@ export const metadata: Metadata = {
     creator: '@Flameapp',
   },
   manifest: "/manifest.json",
-  icons: {
-    icon: '/logo.png',
-    apple: '/icons/icon-192x192.png',
-  },
 };
 
 export default function RootLayout({
